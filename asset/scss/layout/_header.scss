@@ -1,0 +1,15 @@
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100%; height: 40px;
+    background: #f0f;
+    z-index: 99;
+}
+.list-wrap {
+    transform: translateY(0);
+    transition: tranform 0.5s ease-in-out;
+}
+
+.nav-up {
+    top: -40px;
+}
