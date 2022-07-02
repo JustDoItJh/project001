@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto:wght@400;500;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -78,6 +79,10 @@ a {
 }
 a:hover, a:focus {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 button {
@@ -177,6 +182,12 @@ textarea::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  color: #191917;
+  letter-spacing: 0.008em;
+}
+
 .blind {
   position: absolute;
   width: 1px;
@@ -186,28 +197,196 @@ textarea::-webkit-outer-spin-button {
   margin: -1px;
 }
 
+.common-inner {
+  width: 100%;
+  max-width: 1790px;
+  margin: 0 auto;
+}
+
 .header {
+  color: #f8f8f4;
+}
+
+.list-wrap {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 40px;
-  background: #f0f;
+  height: 100px;
   z-index: 99;
-}
-
-.list-wrap {
+  background: #191917;
   transform: translateY(0);
   transition: tranform 0.5s ease-in-out;
 }
 
-.nav-up {
-  top: -40px;
+.list-wrap .nav-item {
+  position: absolute;
+  top: 50%;
+  left: 55px;
+  transform: translateY(-50%);
+  font-weight: 900;
+  letter-spacing: 2.5px;
 }
 
-body {
+.list-wrap .nav-list .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list-wrap .nav-list .logo .italic {
+  font-family: "Playfair Display", "Roboto", serif;
+}
+
+.nav .menu {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #bb8d8d;
+  position: fixed;
+  top: 40px;
+  right: 55px;
+  transition: transform 0.4s ease;
+}
+
+.nav-up {
+  top: -100px;
+}
+
+main {
   text-align: center;
+}
+
+.visual-wrap {
+  position: relative;
   background: #191917;
-  color: #fff;
+  color: #f8f8f4;
+  z-index: 3;
+  padding-top: 97px;
+}
+
+.img-box {
+  width: 377px;
+  height: auto;
+  z-index: 1;
+}
+
+.img-box img {
+  top: 17.5vh;
+  margin-bottom: -12vw;
+  justify-self: center;
+  display: block;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.txt-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 21vw;
+  letter-spacing: -0.0033em;
+}
+
+.txt-box .text {
+  display: block;
+  font-weight: 900;
+  line-height: 0.85;
+}
+
+.txt-box .italic {
+  font-family: "Playfair Display", "Roboto", serif;
+  font-weight: 100;
+  line-height: 0.9;
+  z-index: 2;
+}
+
+.description-wrap {
+  position: relative;
+  color: #f8f8f4;
+  background: #191917;
+  padding: 6.25em;
+  overflow: visible;
+}
+
+.description-wrap .desc {
+  display: inline-block;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+.description-wrap .desc .underline {
+  background-image: linear-gradient(#bb8d8d, #bb8d8d);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
+.description-wrap .desc .italic {
+  font-family: "Playfair Display", "Roboto", serif;
+  font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: 0;
+  font-style: italic;
+  font-size: 26px;
+}
+
+.desc-more {
+  width: 90%;
+  text-align: center;
+}
+
+.desc-more .paragraph {
+  display: none;
+  padding-bottom: 2.5em;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.more {
+  position: relative;
+  display: block;
+  color: #bb8d8d;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.32em;
+}
+
+.more em {
+  font-family: "Playfair Display", "Roboto", serif;
+  font-style: italic;
+  font-size: 1.15em;
+}
+
+.collection-wrap {
+  position: relative;
+  background: #191917;
+  color: #f8f8f4;
+  overflow-x: hidden;
+  z-index: 2;
+}
+
+.collection-wrap .title {
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease-in-out;
+  grid-row: 1;
+  margin-bottom: 4.6em;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+@media (min-width: 1024px) {
+  .desc {
+    display: none;
+  }
 }

@@ -1,5 +1,123 @@
-body{
+main{
     text-align: center;
+}
+
+// article visual-wrap
+.visual-wrap {
+    position: relative;
     background: #191917;
-    color: #fff;
+    color: #f8f8f4;
+    z-index: 3;
+    padding-top: 97px;
+}
+.img-box {
+    width: 377px; height: auto;
+    z-index: 1;
+    
+}
+.img-box img{
+    top: 17.5vh;
+    margin-bottom: -12vw;
+    justify-self: center;
+    display: block;
+    transition: all .3s;
+    z-index: 1;
+}
+.txt-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 21vw;
+    letter-spacing: -.0033em;
+}
+.txt-box .text {
+    display: block;
+    font-weight: 900;
+    line-height: 0.85;
+}
+.txt-box .italic {
+    font-family: $font-sub;
+    font-weight: 100;
+    line-height: 0.9;
+    z-index: 2;
+}
+
+// article description-wrap
+.description-wrap {
+    position: relative;
+    color: #f8f8f4;
+    background: #191917;
+    padding: 6.25em;
+    overflow: visible;
+}
+.description-wrap .desc {
+    display: inline-block;
+    text-align: center;
+    font-family: $font-main;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+}
+.description-wrap .desc .underline {
+    background-image: linear-gradient(#bb8d8d, #bb8d8d);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+}
+.description-wrap .desc .italic {
+    font-family: $font-sub;
+    font-weight: 400;
+    white-space: nowrap;
+    letter-spacing: 0;
+    font-style: italic;
+    font-size: 26px;
+}
+.desc-more {
+    width: 90%;
+    text-align: center;
+}
+.desc-more .paragraph {
+    display: none;
+    padding-bottom: 2.5em;
+    font-size: 16px;
+    line-height: 1.3em;
+}
+.more {
+    position: relative;
+    display: block;
+    color: #bb8d8d;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.32em;
+}
+.more em {
+    font-family: $font-sub;
+    font-style: italic;
+    font-size: 1.15em;
+}
+
+
+// article collection-wrap
+.collection-wrap {
+    position: relative;
+    background: #191917;
+    color: #f8f8f4;
+    overflow-x: hidden;
+    z-index: 2;
+}
+.collection-wrap .title {
+    position: relative;
+    z-index: 2;
+    transition: all .4s ease-in-out;
+    grid-row: 1;
+    margin-bottom: 4.6em;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+@media (min-width: 1024px){
+    .desc {display: none;}
 }

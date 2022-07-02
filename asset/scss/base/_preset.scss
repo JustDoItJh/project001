@@ -1,3 +1,8 @@
+body {
+    font-family: $font-main;
+    color: #191917;
+    letter-spacing: 0.008em;
+}
 
 .blind{
     position: absolute;
@@ -8,3 +13,8 @@
     margin: -1px;
 }
 
+.common-inner {
+    width: 100%;
+    max-width: 1790px;
+    margin: 0 auto;
+}
