@@ -1,39 +1,32 @@
 .header {
     color: #f8f8f4;
+    position: relative;
 }
 .nav {
 }
-.list-wrap {
+.nav-wrap {
     position: fixed;
     top: 0; left: 0; right: 0;
     width: 100%; height: 100px;
     z-index: 99;
     background: #191917;
     transform: translateY(0);
-    transition: tranform 0.5s ease-in-out;
+    transition: all 0.5s;
 }
-.list-wrap .nav-item {
+.nav-wrap .nav-item {
     position: absolute;
-    top: 50%; left: 55px;
+    top: 40%; left: 35px;
     transform: translateY(-50%);
     font-weight: 900;
     letter-spacing: 2.5px;
 }
-.list-wrap .nav-list .logo {
+.nav-wrap .nav-list .logo {
     position: absolute;
     top: 50%; left: 50%; transform: translate(-50%, -50%);
     
 }
-.list-wrap .nav-list .logo .italic {
+.nav-wrap .nav-list .logo .italic {
     font-family: $font-sub;
-}
-.nav .menu {
-    width: 19px; height: 19px;
-    border-radius: 50%;
-    background: #bb8d8d;
-    position: fixed;
-    top: 40px; right: 55px;
-    transition: transform .4s ease;
 }
 
 .nav-up {

@@ -205,9 +205,10 @@ body {
 
 .header {
   color: #f8f8f4;
+  position: relative;
 }
 
-.list-wrap {
+.nav-wrap {
   position: fixed;
   top: 0;
   left: 0;
@@ -217,38 +218,27 @@ body {
   z-index: 99;
   background: #191917;
   transform: translateY(0);
-  transition: tranform 0.5s ease-in-out;
+  transition: all 0.5s;
 }
 
-.list-wrap .nav-item {
+.nav-wrap .nav-item {
   position: absolute;
-  top: 50%;
-  left: 55px;
+  top: 40%;
+  left: 35px;
   transform: translateY(-50%);
   font-weight: 900;
   letter-spacing: 2.5px;
 }
 
-.list-wrap .nav-list .logo {
+.nav-wrap .nav-list .logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.list-wrap .nav-list .logo .italic {
+.nav-wrap .nav-list .logo .italic {
   font-family: "Noto Serif Display", "Roboto", serif;
-}
-
-.nav .menu {
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  background: #bb8d8d;
-  position: fixed;
-  top: 40px;
-  right: 55px;
-  transition: transform 0.4s ease;
 }
 
 .nav-up {
@@ -288,12 +278,87 @@ body {
   font-size: 26px;
 }
 
+.menu-btn {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #bb8d8d;
+  position: fixed;
+  top: 40px;
+  right: 35px;
+  transition: transform 0.3s ease;
+  z-index: 99;
+}
+
+.menu-btn:hover {
+  transform: scale(3);
+}
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: #bb8d8d;
+  transition: 0.5s;
+}
+
+.menu-wrap.active {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .close-area {
+    width: 50%;
+  }
+}
+.close-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .menu-area {
+    width: 50%;
+  }
+}
+.menu-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #bb8d8d;
+  display: flex;
+  flex-direction: column;
+}
+
+.more {
+  position: relative;
+  display: block;
+  color: #bb8d8d;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.32em;
+}
+
+.more em {
+  font-family: "Noto Serif Display", "Roboto", serif;
+  font-style: italic;
+  font-size: 1.15em;
+}
+
 main {
   text-align: center;
 }
 
 .visual-wrap {
-  position: relative;
   background: #191917;
   color: #f8f8f4;
   z-index: 3;
@@ -301,18 +366,34 @@ main {
 }
 
 .img-box {
-  width: 377px;
-  height: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 1;
+  display: flex;
+  width: 32vw;
+  height: auto;
+  margin: 0 auto;
 }
 
+@media (min-width: 1024px) {
+  .img-box img {
+    width: 100%;
+    top: 17.5vh;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .img-box img {
+    width: 100%;
+    margin-bottom: -10vw;
+    z-index: 1;
+    padding-top: 0;
+  }
+}
 .img-box img {
-  top: 17.5vh;
+  padding-top: 22px;
   margin-bottom: -12vw;
-  justify-self: center;
-  display: block;
-  transition: all 0.3s;
-  z-index: 1;
 }
 
 .txt-box {
@@ -341,8 +422,7 @@ main {
   position: relative;
   color: #f8f8f4;
   background: #191917;
-  padding: 6.25em;
-  overflow: visible;
+  padding-top: 35em;
 }
 
 .description-wrap .desc {
@@ -353,6 +433,7 @@ main {
   font-size: 20px;
   line-height: 1.5em;
   letter-spacing: 0.05em;
+  transition-duration: 2s;
 }
 
 .description-wrap .desc .underline {
@@ -381,23 +462,6 @@ main {
   padding-bottom: 2.5em;
   font-size: 16px;
   line-height: 1.3em;
-}
-
-.more {
-  position: relative;
-  display: block;
-  color: #bb8d8d;
-  margin: 0 auto;
-  margin-top: 50px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.32em;
-}
-
-.more em {
-  font-family: "Noto Serif Display", "Roboto", serif;
-  font-style: italic;
-  font-size: 1.15em;
 }
 
 .collection-wrap {
@@ -758,6 +822,7 @@ main {
 }
 .lab-wrap .lab-top {
   position: relative;
+  padding-top: 10em;
 }
 
 @media (min-width: 1024px) {
@@ -767,15 +832,14 @@ main {
 }
 @media (min-width: 768px) {
   .lab-wrap .lab-top .img-wrap {
-    position: -webkit-sticky;
-    position: sticky;
     top: 15vh;
     width: 75%;
-    margin-bottom: -10vw;
   }
 }
 .lab-wrap .lab-top .img-wrap {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: block;
   width: 100%;
 }

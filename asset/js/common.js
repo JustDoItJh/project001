@@ -1,7 +1,14 @@
+// AOS Plugin
+$( document ).ready( function() {
+    AOS.init();
+  } );
+
+
+// Scroll Down & Up
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('.list-wrap').outerHeight();
+var navbarHeight = $('.nav-wrap').outerHeight();
 
 $(window).scroll(function(e){
     didScroll = true
@@ -24,12 +31,12 @@ function hasScrolled(){
 
     if(st > lastScrollTop && st > navbarHeight){
         
-        $('.list-wrap').removeClass('nav-down').addClass('nav-up');
+        $('.nav-wrap').removeClass('nav-down').addClass('nav-up');
 
     } else {
         
         if(st + $(window).height() < $(document).height()) {
-            $('.list-wrap').removeClass('nav-up').addClass('nav-down');
+            $('.nav-wrap').removeClass('nav-up').addClass('nav-down');
         }
 
     }
@@ -37,8 +44,16 @@ function hasScrolled(){
     lastScrollTop = st;
 }
 
+// Menu Button
+$(function(){
 
-// AOS Plugin
-$( document ).ready( function() {
-    AOS.init();
-  } );
+    $('.menu-btn').click(function(){
+        // $('.nav-area').animate({'left':0},300)
+        $('.menu-wrap').addClass('active')
+    })
+
+    $('.close-btn').click(function(){
+        // $('.nav-area').animate({'left':'-100%'},300)
+        $('.menu-wrap').removeClass('active')
+    })
+})

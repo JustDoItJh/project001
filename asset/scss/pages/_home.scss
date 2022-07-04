@@ -4,24 +4,40 @@ main{
 
 // article visual-wrap
 .visual-wrap {
-    position: relative;
     background: #191917;
     color: #f8f8f4;
     z-index: 3;
     padding-top: 97px;
 }
 .img-box {
-    width: 377px; height: auto;
+    position: sticky;
+    top: 0;
     z-index: 1;
-    
+    display: flex;
+    width: 32vw; height: auto;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .img-box img {
+        width: 100%;
+        top: 17.5vh;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 768px) {
+    .img-box img {
+        width: 100%;
+        margin-bottom: -10vw;
+        z-index: 1;
+        padding-top: 0;
+    }
 }
 .img-box img{
-    top: 17.5vh;
+    
+    padding-top: 22px;
     margin-bottom: -12vw;
-    justify-self: center;
-    display: block;
-    transition: all .3s;
-    z-index: 1;
+    
 }
 .txt-box {
     display: flex;
@@ -48,8 +64,8 @@ main{
     position: relative;
     color: #f8f8f4;
     background: #191917;
-    padding: 6.25em;
-    overflow: visible;
+    padding-top: 35em;
+    
 }
 .description-wrap .desc {
     display: inline-block;
@@ -59,6 +75,7 @@ main{
     font-size: 20px;
     line-height: 1.5em;
     letter-spacing: .05em;
+    transition-duration: 2s;
 }
 .description-wrap .desc .underline {
     background-image: linear-gradient(#bb8d8d, #bb8d8d);
@@ -83,21 +100,6 @@ main{
     padding-bottom: 2.5em;
     font-size: 16px;
     line-height: 1.3em;
-}
-.more {
-    position: relative;
-    display: block;
-    color: #bb8d8d;
-    margin: 0 auto;
-    margin-top: 50px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.32em;
-}
-.more em {
-    font-family: $font-sub;
-    font-style: italic;
-    font-size: 1.15em;
 }
 
 
@@ -423,6 +425,7 @@ main{
 }
 .lab-wrap .lab-top {
     position: relative;
+    padding-top: 10em;
 }
 
 @media (min-width: 1024px) {
@@ -432,14 +435,14 @@ main{
 }
 @media (min-width: 768px) {
     .lab-wrap .lab-top .img-wrap {
-        position: sticky;
         top: 15vh;
         width: 75%;
-        margin-bottom: -10vw;
+        
     }
 }
 .lab-wrap .lab-top .img-wrap {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: block;
     width: 100%;
 }
