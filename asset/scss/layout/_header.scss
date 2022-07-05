@@ -20,13 +20,17 @@
     font-weight: 900;
     letter-spacing: 2.5px;
 }
+@media (max-width: 1023px) {
+    .nav-item {display: none;}
+}
 .nav-wrap .nav-list .logo {
     position: absolute;
     top: 50%; left: 50%; transform: translate(-50%, -50%);
-    
+    font-weight: 900;
 }
 .nav-wrap .nav-list .logo .italic {
     font-family: $font-sub;
+    font-weight: 400;
 }
 
 .nav-up {

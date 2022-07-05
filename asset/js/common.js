@@ -57,3 +57,27 @@ $(function(){
         $('.menu-wrap').removeClass('active')
     })
 })
+
+
+// More Button
+$(function(){
+    $('.more').click(function(){
+        $('#hide-text').slideToggle();
+        $('.more span').text('Less');
+    });
+});
+
+
+// Mouse Cursor drag
+const circle = $('.circle').width()/2;
+
+$('.main-wrap').mousemove(function(e){
+    $('.circle').css('top', e.pageY - circle);
+    $('.circle').css('left', e.pageX - circle);
+    $('.circle').fadein();
+});
+
+$('.main-wrap').on('mouseleave', function(){
+    $('.circle').fadeout();
+})
+
