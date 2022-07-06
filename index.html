@@ -13,75 +13,78 @@
 <body>
     <div class="main-wrap">
         <div class="circle"></div>
+
+
         <header class="header">
-            <nav class="nav">
-                <div class="nav-wrap">
-                    <ul class="nav-list">
-                        <li data-aos="fade" class="nav-item">DIGITAL FASHION</li>
-                        <li class="logo">
-                            <a href="" class="logo-link">
-                                <span>N U E N </span>
-                                <span class="italic">O</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <button class="menu-btn"></button>
-            <div class="menu-wrap">
+
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="" class="link-logo">
+                      <span>N U E N </span><span class="italic">O</span>
+                    </a>
+                </h1>
+                <a href="" class="link-social">DIGITAL FASHION</a>
+                <button class="menu-btn"><span class="blind">메뉴 열림</span></button>
+            </div>
+            <!-- 
+            #menu -> group -> area -> wrap -> box
+            a -> link-??? btn-??? 
+            -->
+            <div class="group-menu">
                 <div class="close-area"></div>
-                <div class="menu-area">
-                    <button class="close-btn"></button>
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <em>Co</em>ncept
-                            </a>
-                        </li>
-                        <li class="link-wrap">
-                            <a href="" class="menu-link">
-                                <em>L</em>ab
-                            </a>
-                        </li>
-                        <li class="link-wrap">
-                            <a href="" class="menu-link">
-                                <em>Co</em>ntact
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="menu-media">
+                <div class="menu-inner">
+                    <button class="close-btn"><span class="blind">메뉴 닫기</span></button>
+                    <div class="menu-area">
+                        <nav>
+                            <ul class="menu-list">
+                                <li class="menu-item"><a href="" class="menu-link"><b>Co</b>ncept</a></li>
+                                <li class="menu-item"><a href="" class="menu-link"><b>L</b>ab</a></li>
+                                <li class="menu-item"><a href="" class="menu-link"><b>Co</b>ntact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="media-area">
                         <a href="" class="media-link">Instagram</a>
                         <a href="" class="media-link">Medium</a>
                         <span class="italic">( n )</span>
                     </div>
                 </div>
+
             </div>
+
         </header>
+
+
+
         <main class="main">
-            <section class="container">
-                <article class="visual-wrap">
+            <div class="container">
+
+
+                <section class="sc-visual visual-wrap">
                     <div class="common-inner">
-                        <div id="visual-image" data-aos="fade-up" class="img-box">
+                        <div id="visual-image" class="img-box">
                             <img src="https://nuenofashion.com/images/home/header@1x.jpg" alt="NUENO DIGITAL IMAGE" width="377" height="449">
                         </div>
-                        <h1 class="txt-box">
-                            <span data-aos="fade-up" data-aos-delay="200" data-aos-anchor="#visual-image" class="text">WHERE</span>
-                            <span data-aos="fade-up" data-aos-delay="400" data-aos-anchor="#visual-image" class="italic">DIGITAL</span>
-                            <span data-aos="fade-up" data-aos-delay="600" data-aos-anchor="#visual-image" class="text">MEETS</span>
-                            <span data-aos="fade-up" data-aos-delay="800" data-aos-anchor="#visual-image" class="text">FASHION</span>
-                        </h1>
+                        <h2 class="txt-box">
+                            <span data-name="motion" data-y="100" class="text">WHERE</span>
+                            <span data-name="motion" data-y="100" class="italic">DIGITAL</span>
+                            <span data-name="motion" data-y="100" class="text">MEETS</span>
+                            <span data-name="motion" data-y="100" class="text">FASHION</span>
+                        </h2>
                     </div>
-                </article>
-                <article class="description-wrap">
+                </section>
+
+                <!-- id 쓸땐 camelCase  -->
+
+                <aside class="sc-description description-wrap">
                     <div class="common-inner">
-                        <p data-aos="fade-up" class="desc">
+                        <strong class="desc" data-name="motion">
                             WE ARE A
                             <span class="underline">DIGITAL FASHION HOUSE</span>
                             THAT MIXES TECHNOLOGY AND CREATIVITY <br>
                             TO TAKE FASHION BEYOND ONLY-PHYSICAL EXPERIENCES.
                             <span class="italic">( n )</span>
-                        </p>
-        
+                        </strong>
                         <div id="hide-text" class="desc-more">
                             <p class="paragraph">
                                 We have established Nueno Concept as the first Polish brand of clothes
@@ -93,29 +96,28 @@
                                 only small pieces of the future where Nueno will lead your brand.
                             </p>
                         </div>
-                        <button data-aos="fade-up" class="more">
+                        <button class="more  btn-more" data-name="motion">
                             <span>
                                 <em>Re</em>ad more about us
                             </span>
                         </button>
                     </div>
-                </article>
+                </aside>
 
-                <article class="collection-wrap">
-                    <div data-aos="fade-left" class="common-inner">
+                <!-- 아티스트영역 -->
+                <section class="sc-collection collection-wrap">
+                    <div class="common-inner">
                         <h2 class="title">
                             OUR <br>
                             DIGITAL COLLECTION
                         </h2>
-                        <p class="desc">
-                            WE ARE A DIGITAL FASHION HOUSE THAT MIXES TECHNOLOGY AND CREATIVITY TO TAKE FASHION BEYOND ONLY-PHYSICAL EXPERIENCES.
-                            <!-- @media screen display: none -->
-                        </p>
+                        
                         <div class="slide-num">
                             NO. <span class="italic">1 / 7</span>
                         </div>
+
                         <div class="slider">
-                            <div class="swiper-container">
+                            <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide text">
                                         <p>
@@ -165,40 +167,42 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
-                </article>
-                <article class="metalX-wrap">
-                    <div data-aos="fade-right" class="common-inner">
-                        <h2 class="wrap-title article-title">NEW</h2>
-                        <a href="" class="link">
-                            <div class="cta explore">
+                </section>
+
+                <section class="sc-metal metalX-wrap">
+                    <div class="common-inner">
+                        <h2 class="wrap-title">NEW</h2>
+                        
+
+                        <div class="video-wrap">
+                            <div class="cursor-explore">
                                 <p>
                                     <em>Ex</em>plore <br>
                                     Nueno MetalX
                                 </p>
                             </div>
-                            <div class="video-wrap">
-                                <img src="https://angartwork.akamaized.net/?id=129775491&size=640" alt="">
-                            </div>
-                        </a>
-                        <h3 class="subtitle article-title">COLLECTION</h3>
-                        <h3 class="subtitle article-title">COLLECTION</h3>
-                        <h3 class="subtitle article-title">COLLECTION</h3>
+                            <img src="https://angartwork.akamaized.net/?id=129775491&size=640" alt="">
+                        </div>
+                        
+                        <span class="subtitle">COLLECTION</span>
+                        <span class="subtitle">COLLECTION</span>
+                        <span class="subtitle">COLLECTION</span>
                     </div>
-                </article>
+                </section>
 
-                <article data-aos="fade" class="concept-wrap">
-                    <div class="concept">
+
+                <section class="sc-concept concept-wrap">
+                    
                         <a href="" class="img-wrap">
                             <img src="https://nuenofashion.com/images/home/concept@1x.jpg" alt="">
-                            <span class="title">
+                            <h2 class="title">
                                 <!--  @media screen display:none -->
                                 <span>CONC</span>
                                 <span>EPT</span>
-                            </span>
+                            </h2>
                             <div class="cta explore">
                                 <p>
                                     <em>Ex</em>plore <br>
@@ -208,15 +212,15 @@
                         </a>
                         <div class="content-wrap">
                             <h2 class="title">
-                                <span>CONC</span>
-                                <span>EPT</span>
+                                <span data-name="motion" data-x="-100">CONC</span>
+                                <span data-name="motion" data-x="100">EPT</span>
                             </h2>
-                            <p data-aos="fade-up" class="desc">
+                            <p  class="desc">
                                 DIGITAL FASHION IS A NEW CHAPTER <br>
                                 <em class="italic">DISCOVER </em>
                                 NUENO CONCEPT
                             </p>
-                            <p data-aos="fade-up" class="text">
+                            <p class="text">
                                 There is nothing more important than the act of pushing your
                                 imagination forward.
                                 <br><br>
@@ -225,14 +229,13 @@
                                 <br><br>
                                 Explore the full story of clothes that don’t exist.
                             </p>
-                            <a href="" data-aos="fade-up" class="link">
+                            <a href=""  class="link">
                                 <em class="italic">Ex</em>plore Nueno Concept
                             </a>
-                        </div>
+                        
                     </div>
-                </article>
-                
-                <article class="lab-wrap">
+                </section>
+                <section class="cs-lab lab-wrap">
                     <div class="common-inner lab-top">
                         <a href="" class="img-wrap">
                             <img data-aos="fade-right" src="https://nuenofashion.com/images/home/header@1x.jpg" alt="" width="349" height="419">
@@ -244,83 +247,84 @@
                             </div>
                         </a>
                         <h2 class="title">
-                            <span data-aos="fade-left" class="block">
+                            <span >
                                 LA <br> B
                             </span>
                         </h2>
-                    </div>
-                    <div class="common-inner lab-bottom">
-                        <p data-aos="fade-up" class="desc">
+                        <p  class="desc">
                             DIGITAL EXPERIENCES FOR FASHION <br>
                             <em class="italic">DISCOVER</em>
                             NUENO LAB
                         </p>
-                        <p class="text article-title">
-                            <span data-aos="fade-left" class="right block">
+                    </div>
+                    <div class="common-inner lab-bottom">
+                    
+                        <p class="text-area">
+                            <span  class="right">
                                 WE MERGE THE <strong>DIGITAL</strong> <br>
                                 POSSIBILITIES AND <br>
                                 THE NEEDS <em>OF</em> FASHION <br>
                                 BRANDS TO CREATE <br>
                             </span>
-                            <span data-aos="fade-right" class="left block">
+                            <span  class="left">
                                 <strong>NEW KINDS</strong> <em>OF</em> EXPERIENCES. <br>
                                 <span class="italic">(n)</span>
                             </span>
         
                         </p>
-                        <a data-aos="fade-up" href="" class="link">
+                        <a href="" class="link">
                             <em class="italic">Ex</em>plore Nueno Lab
                         </a>
                     </div>
-                </article>
-                <article class="wrapper highlights-wrap">
+                </section>
+                <section class="sc-highlights wrapper highlights-wrap">
                     <div class="common-inner">
-                        <h2 data-aos="fade" class="title">OUR HIGHLIGHTS</h2>
+                        <h2 class="title">OUR HIGHLIGHTS</h2>
                         <div class="logos">
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">Vogue</span>
-                                <img src="	https://nuenofashion.com/images/home/highlights/vogue.png" alt="">
+                                <img src="   https://nuenofashion.com/images/home/highlights/vogue.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">K MAG MAGAZYN</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/kmag@2x.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">newonce</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/newonce.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">INNPoland</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/inn@2x.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">Wirtualna Polska</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/wp@2x.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">Gazeta.pl</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/gazeta@2x.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">Pismo.</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/pismo@2x.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">Chillizet</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/chillizet@2x.png" alt="">
                             </a>
-                            <a data-aos="fade-up" href="" class="logo">
+                            <a href="" class="logo">
                                 <span class="blind">naTemat</span>
                                 <img src="https://nuenofashion.com/images/home/highlights/natemat@2x.png" alt="">
                             </a>
                         </div>
                     </div>
-                </article>
-                <article class="wrapper articles-wrap">
+                </section>
+                <section class="sc-articles wrapper articles-wrap">
                     <div class="common-inner">
-                        <h2 data-aos="fade-up" class="title">OUR ARTICLES</h2>
+                        <h2 class="title">OUR ARTICLES</h2>
                         <div class="articles">
-                            <a data-aos="fade" href="" class="article-title link">
+                            <a href="" class="article-title link">
                                 <span class="link-title">
                                     THE CLOTHES THAT DO<em>N'T</em>
                                     EXIST. WHAT IS
@@ -328,19 +332,21 @@
                                     FASHION /
                                 </span>
                             </a>
-                            <a data-aos="fade" href="" class="article-title link">
+                            <a href="" class="article-title link">
                                 <span class="link-title">
                                     HOW TO GET CLOSER TO CUSTOMERS? AR USED BY FASHION BRANDS. /
                                 </span>
                             </a>
-                            <a data-aos="fade" href="" class="article-title link">
+                            <a href="" class="article-title link">
                                 <span class="link-title">VOGUE TAIWAN EXAMPLES.</span>
                             </a>
                         </div>
                     </div>
-                </article>
-            </section>
+                </section>
+
+            </div>
         </main>
+
         <footer class="footer">
             <div class="footer-cont">
                 <p>
@@ -354,10 +360,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script> -->
     <script src="./asset/js/common.js"></script>
     <script src="./asset/js/main.js"></script>

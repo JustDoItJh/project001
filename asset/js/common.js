@@ -1,51 +1,38 @@
 // AOS Plugin
-$( document ).ready( function() {
-    AOS.init();
-  } );
+$(function(){
 
+    /**
+     * 메뉴 업 다운
+     * 
+     * @version 1.0.0
+     * @since 2022-01-16
+     * @author 본인이름 (Nico)
+     */
+    lastScroll = 0;
 
-// Scroll Down & Up
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('.nav-wrap').outerHeight();
+    $(window).scroll(function(){
+        currScroll = $(this).scrollTop();
 
-$(window).scroll(function(e){
-    didScroll = true
-});
-
-setInterval(function(){
-
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-
-}, 250);
-
-function hasScrolled(){
-    var st = $(this).scrollTop();
-
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-
-    if(st > lastScrollTop && st > navbarHeight){
         
-        $('.nav-wrap').removeClass('nav-down').addClass('nav-up');
-
-    } else {
-        
-        if(st + $(window).height() < $(document).height()) {
-            $('.nav-wrap').removeClass('nav-up').addClass('nav-down');
+        if(currScroll > 0) {
+            $('.header .inner').addClass('active')
+        } else {
+            $('.header .inner').removeClass('active')
         }
 
-    }
+        if(currScroll > lastScroll) {
+            $('.header .inner').addClass('hide')
+        } else {
+            $('.header .inner').removeClass('hide')
+        }
 
-    lastScrollTop = st;
-}
+        lastScroll = currScroll
 
-// Menu Button
-$(function(){
+    })
+
+
+    // Menu Button
+    
 
     $('.menu-btn').click(function(){
         // $('.nav-area').animate({'left':0},300)
@@ -56,28 +43,52 @@ $(function(){
         // $('.nav-area').animate({'left':'-100%'},300)
         $('.menu-wrap').removeClass('active')
     })
-})
+    
 
 
-// More Button
-$(function(){
+    // More Button
+    
     $('.more').click(function(){
         $('#hide-text').slideToggle();
-        $('.more span').text('Less');
+
+        if($(this).hasClass('active')){
+            $(this).removeClass('active')
+            $('.more span').html('<em>Re</em>ad more about us');
+        } else {
+            $(this).removeClass('active')
+            $('.more span').html('Less');
+        }
+        
     });
+    
+
+
+    // Mouse Cursor drag
+    const circle = $('.circle').width()/2;
+
+    $('.main-wrap').mousemove(function(e){
+
+        // 모션 라이브러리
+        $('.circle').show();
+        gsap.to('.circle',0.8,{
+            x: e.clientX - circle,
+            y: e.clientY - circle
+        })
+
+    });
+
+
+    const cursorWidth2 = $('.cursor-explore').width()/2;
+    const cursorHeight2 = $('.cursor-explore').height()/2;
+    $('.video-wrap').mousemove(function(e){
+
+        $('.circle').addClass('hide');
+        gsap.to('.cursor-explore',0.8,{
+            x: e.offsetX - cursorWidth2,
+            y: e.offsetY - cursorHeight2
+        })
+
+    });
+
+
 });
-
-
-// Mouse Cursor drag
-const circle = $('.circle').width()/2;
-
-$('.main-wrap').mousemove(function(e){
-    $('.circle').css('top', e.pageY - circle);
-    $('.circle').css('left', e.pageX - circle);
-    $('.circle').fadein();
-});
-
-$('.main-wrap').on('mouseleave', function(){
-    $('.circle').fadeout();
-})
-
