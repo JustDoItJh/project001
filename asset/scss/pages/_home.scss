@@ -1,87 +1,60 @@
 .main-wrap {
     position: relative;
+    
 }
 main{
     text-align: center;
 }
 
-// article visual-wrap
-.visual-wrap {
+// ----------------------- Visual Section -----------------------
+.sc-visual {
     position: relative;
     background: #191917;
     color: #f8f8f4;
     z-index: 3;
-}
-.visual-wrap .common-inner {
-    padding-top: 97px;
-}
-@media (max-width: 767px) {
-    .img-box {
-        width: 100%;
-    }
+    
+    .common-inner {
+        padding-top: 100px;
 
-    .img-box img {
-        max-width: 100%;
-        height: auto;
-        z-index: 1;
-        margin: 0 auto;
-    }
+        .img-box {
+            position: sticky;
+            top: 20vh;
+            z-index: 1;
+            width: 30%;
+            margin: 0 auto;
 
-    .txt-box {
-        margin-top: -50px;
-    }
-}
-@media (min-width: 768px) {
-    .img-box {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        display: flex;
-        width: 32vw; height: auto;
-        margin: 0 auto;
-    }
-}
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
 
-@media (min-width: 1024px) {
-    .img-box img {
-        max-width: 100%;
-        top: 17.5vh;
-        margin: 0 auto;
-    }
-}
-@media (min-width: 768px) {
-    .img-box img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin-bottom: -10vw;
-        z-index: 1;
-        padding-top: 10vh;
+        .txt-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 21vw;
+            letter-spacing: -.0033em;
+
+            .text {
+                display: block;
+                font-weight: 900;
+                line-height: 0.85;
+            }
+            .italic {
+                font-family: $font-sub;
+                font-weight: 100;
+                line-height: 0.9;
+                z-index: 2;
+            }
+        }
     }
 }
 
-.txt-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 21vw;
-    letter-spacing: -.0033em;
-}
-.txt-box .text {
-    display: block;
-    font-weight: 900;
-    line-height: 0.85;
-}
-.txt-box .italic {
-    font-family: $font-sub;
-    font-weight: 100;
-    line-height: 0.9;
-    z-index: 2;
-}
 
 
-
+// ----------------------- Description Aside -----------------------
 .sc-description{
     position: relative;
     color: #f8f8f4;
@@ -90,57 +63,51 @@ main{
     display: flex;
     align-items: center;
 
+    .desc {
+        text-align: center;
+        font-family: $font-main;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 1.5em;
+        letter-spacing: .05em;
 
-
-    .paragraph {
-        max-width: 800px;
-        margin: 0 auto;
-        padding-bottom: 2.5em;
-        font-size: 16px;
-        line-height: 1.3em;
+        .underline {
+            background-image: linear-gradient(#bb8d8d, #bb8d8d);
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 2px;
+        }
+        .italic {
+            font-family: $font-sub;
+            font-weight: 400;
+            white-space: nowrap;
+            letter-spacing: 0;
+            font-style: italic;
+            font-size: 26px;
+        }
     }
+    #hide-text {
+        display: none;
+        margin: 0 auto;
+        padding-top: 70px;
 
-}
-
-.description-wrap .desc {
-    text-align: center;
-    font-family: $font-main;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 1.5em;
-    letter-spacing: .05em;
-}
-.description-wrap .desc .underline {
-    background-image: linear-gradient(#bb8d8d, #bb8d8d);
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-}
-.description-wrap .desc .italic {
-    font-family: $font-sub;
-    font-weight: 400;
-    white-space: nowrap;
-    letter-spacing: 0;
-    font-style: italic;
-    font-size: 26px;
-}
-#hide-text {
-    display: none;
-    margin: 0 auto;
-    padding-top: 70px;
-}
-.desc-more {
-    width: 90%;
-    text-align: center;
+        .paragraph {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 2.5em;
+            font-size: 16px;
+            line-height: 1.3em;
+        }
+    }
+    .desc-more {
+        width: 90%;
+        text-align: center;
+    }
 }
 
 
 
-
-
-
-
-// article collection-wrap
+// ----------------------- Section Collection -----------------------
 
 .sc-collection {
     position: relative;
@@ -148,19 +115,29 @@ main{
     color: #f8f8f4;
     z-index: 2;
     height: 100vh;
-    // background: #888;
+    
     .title{
         position: absolute;
-        top: 0;left: 0;
+        top: 10%;left: 15%;
+        text-align: right;
+        font-weight: 900;
+        line-height: 1em;
+        letter-spacing: .1em;
+        font-size: 13px;
     }
 
     .slide-num {
         position: absolute;
-        bottom: 100px;
-
-        font-size: 50px;
-        writing-mode:tb
-      
+        bottom: 10%; left: 2%;
+        font-weight: 900;
+        font-size: 55px;
+        letter-spacing: .2em;
+        writing-mode:tb;
+        
+        .italic {
+            font-family: $font-sub;
+            font-weight: 400;
+        }
     }
 
     .swiper{
@@ -175,46 +152,87 @@ main{
             &.text{
                 width: 50vw;
                 p{
-                max-width: 500px;   
+                    max-width: 500px;
+                    font-size: 16px;
+                    font-weight: 900;
+                    text-transform: uppercase;
                 }
             }
         }
     }
-
-
 }
 
+
+// ----------------------- Section Metal -----------------------
 .sc-metal {
     position: relative;
     background: #191917;
     color: #f8f8f4;
-    padding-top: 25px;
-    padding-bottom: 128px;
+    .common-inner {
+        padding-top: 10vh;
+        padding-bottom: 30vh;
+    }
 
-  
-
+    .title {
+        position: absolute;
+        top: 10%; left: 55%;
+        transform: translate(-2%, -55%);
+        font-family: $font-sub;
+        font-weight: 400;
+        font-size: 6vw;
+        z-index: 21;
+    }
     .video-wrap{
         z-index: 20;
         position: relative;
         width: 400px;
         height: 700px;
-        background: #f00;
         margin: 0 auto;
         overflow: hidden;
-    }
 
-    .cursor-explore{
-        width: 100px;height: 100px;
-        background: #00f;
+        .cursor-explore{
+            position: absolute;
+            top: 0; left: 0;
+            z-index: 1;
+            pointer-events: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 160px;
+            border: 1px solid #bb8d8d;
+            border-radius: 50%;
+
+            p {
+                font-size: 18px;
+                em {
+                    font-family: $font-sub;
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+    .inner {
         position: absolute;
-        top: 0;left: 0;
-        z-index: 1;
-        pointer-events: none;
+        top: 35%; left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+        
+        .subtitle {
+            display: block;
+            font-family: $font-sub;
+            font-weight: 400;
+            font-size: 6vw;
+            letter-spacing: .08em;
+        }
     }
 }
 
 
-
+// ----------------------- Section Concept -----------------------
 .sc-concept {
     display: flex;
     .img-wrap {
@@ -248,7 +266,7 @@ main{
 
 
 
-// article lab-wrap 
+// ----------------------- Section Lab -----------------------
 .lab-wrap {
     position: relative;
     background: #191917;
@@ -382,7 +400,7 @@ main{
 }
 
 
-// article hightlights-wrap
+// ----------------------- Section Hightlights -----------------------
 .wrapper {
     position: relative;
     background: #f8f8f4;
@@ -413,7 +431,7 @@ main{
     transform: scale(.5);
 }
 
-// article articles-wrap
+// ----------------------- Section Articles -----------------------
 .articles {
     text-align: left;
     padding: 0 10vw;

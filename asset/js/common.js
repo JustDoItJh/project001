@@ -1,4 +1,3 @@
-// AOS Plugin
 $(function(){
 
     /**
@@ -36,27 +35,27 @@ $(function(){
 
     $('.menu-btn').click(function(){
         // $('.nav-area').animate({'left':0},300)
-        $('.menu-wrap').addClass('active')
+        $('.group-menu').addClass('active')
     })
 
     $('.close-btn').click(function(){
         // $('.nav-area').animate({'left':'-100%'},300)
-        $('.menu-wrap').removeClass('active')
+        $('.group-menu').removeClass('active')
     })
     
 
 
     // More Button
     
-    $('.more').click(function(){
+    $('.btn-more').click(function(){
         $('#hide-text').slideToggle();
 
         if($(this).hasClass('active')){
             $(this).removeClass('active')
-            $('.more span').html('<em>Re</em>ad more about us');
+            $('.btn-more span').html('<em>Re</em>ad more about us');
         } else {
-            $(this).removeClass('active')
-            $('.more span').html('Less');
+            $(this).addClass('active')
+            $('.btn-more span').html('Less');
         }
         
     });

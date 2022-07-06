@@ -9,7 +9,7 @@ $(function(){
             el: ".slide-num .italic",
             type: "custom",
             renderCustom: function(swiper, current, total){
-              return `${current} / ${total}`
+              return `${current}/${total}`
             }
           },
           navigation: {
@@ -56,7 +56,7 @@ $(function(){
       // 특정영역에서 트리거
       ScrollTrigger.create({
         trigger: element,
-        start: "top 100%", //[트리거기준 , 윈도우기준]
+        start: "top 50%", //[트리거기준 , 윈도우기준]
         end: "bottom top", //[트리거기준 , 윈도우기준]
         markers: true, // 기준을 알려주는것
         animation: motion,

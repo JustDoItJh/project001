@@ -210,7 +210,7 @@ body {
 .header > .inner {
   position: fixed;
   padding: 50px;
-  z-index: 10;
+  z-index: 99;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -257,7 +257,7 @@ body {
   flex: 1;
   background: #00f;
 }
-.group-menu .menu-inner {
+.group-menu .menu-area {
   flex: 1;
 }
 
@@ -311,7 +311,7 @@ body {
   display: none;
 }
 
-.more {
+.btn-more {
   position: relative;
   display: block;
   color: #bb8d8d;
@@ -321,8 +321,7 @@ body {
   font-size: 16px;
   line-height: 1.32em;
 }
-
-.more em {
+.btn-more em {
   font-family: "Noto Serif Display", "Roboto", serif;
   font-style: italic;
   font-size: 1.15em;
@@ -336,63 +335,28 @@ main {
   text-align: center;
 }
 
-.visual-wrap {
+.sc-visual {
   position: relative;
   background: #191917;
   color: #f8f8f4;
   z-index: 3;
 }
-
-.visual-wrap .common-inner {
-  padding-top: 97px;
+.sc-visual .common-inner {
+  padding-top: 100px;
 }
-
-@media (max-width: 767px) {
-  .img-box {
-    width: 100%;
-  }
-
-  .img-box img {
-    max-width: 100%;
-    height: auto;
-    z-index: 1;
-    margin: 0 auto;
-  }
-
-  .txt-box {
-    margin-top: -50px;
-  }
+.sc-visual .common-inner .img-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20vh;
+  z-index: 1;
+  width: 30%;
+  margin: 0 auto;
 }
-@media (min-width: 768px) {
-  .img-box {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    width: 32vw;
-    height: auto;
-    margin: 0 auto;
-  }
+.sc-visual .common-inner .img-box img {
+  max-width: 100%;
+  height: auto;
 }
-@media (min-width: 1024px) {
-  .img-box img {
-    max-width: 100%;
-    top: 17.5vh;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 768px) {
-  .img-box img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: -10vw;
-    z-index: 1;
-    padding-top: 10vh;
-  }
-}
-.txt-box {
+.sc-visual .common-inner .txt-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -400,14 +364,12 @@ main {
   font-size: 21vw;
   letter-spacing: -0.0033em;
 }
-
-.txt-box .text {
+.sc-visual .common-inner .txt-box .text {
   display: block;
   font-weight: 900;
   line-height: 0.85;
 }
-
-.txt-box .italic {
+.sc-visual .common-inner .txt-box .italic {
   font-family: "Noto Serif Display", "Roboto", serif;
   font-weight: 100;
   line-height: 0.9;
@@ -422,15 +384,7 @@ main {
   display: flex;
   align-items: center;
 }
-.sc-description .paragraph {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-bottom: 2.5em;
-  font-size: 16px;
-  line-height: 1.3em;
-}
-
-.description-wrap .desc {
+.sc-description .desc {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
@@ -438,15 +392,13 @@ main {
   line-height: 1.5em;
   letter-spacing: 0.05em;
 }
-
-.description-wrap .desc .underline {
+.sc-description .desc .underline {
   background-image: linear-gradient(#bb8d8d, #bb8d8d);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 2px;
 }
-
-.description-wrap .desc .italic {
+.sc-description .desc .italic {
   font-family: "Noto Serif Display", "Roboto", serif;
   font-weight: 400;
   white-space: nowrap;
@@ -454,14 +406,19 @@ main {
   font-style: italic;
   font-size: 26px;
 }
-
-#hide-text {
+.sc-description #hide-text {
   display: none;
   margin: 0 auto;
   padding-top: 70px;
 }
-
-.desc-more {
+.sc-description #hide-text .paragraph {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 2.5em;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+.sc-description .desc-more {
   width: 90%;
   text-align: center;
 }
@@ -475,15 +432,27 @@ main {
 }
 .sc-collection .title {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 15%;
+  text-align: right;
+  font-weight: 900;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  font-size: 13px;
 }
 .sc-collection .slide-num {
   position: absolute;
-  bottom: 100px;
-  font-size: 50px;
+  bottom: 10%;
+  left: 2%;
+  font-weight: 900;
+  font-size: 55px;
+  letter-spacing: 0.2em;
   -ms-writing-mode: tb;
       writing-mode: tb;
+}
+.sc-collection .slide-num .italic {
+  font-family: "Noto Serif Display", "Roboto", serif;
+  font-weight: 400;
 }
 .sc-collection .swiper {
   height: 100%;
@@ -501,33 +470,75 @@ main {
 }
 .sc-collection .swiper-slide.text p {
   max-width: 500px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .sc-metal {
   position: relative;
   background: #191917;
   color: #f8f8f4;
-  padding-top: 25px;
-  padding-bottom: 128px;
+}
+.sc-metal .common-inner {
+  padding-top: 10vh;
+  padding-bottom: 30vh;
+}
+.sc-metal .title {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  transform: translate(-2%, -55%);
+  font-family: "Noto Serif Display", "Roboto", serif;
+  font-weight: 400;
+  font-size: 6vw;
+  z-index: 21;
 }
 .sc-metal .video-wrap {
   z-index: 20;
   position: relative;
   width: 400px;
   height: 700px;
-  background: #f00;
   margin: 0 auto;
   overflow: hidden;
 }
-.sc-metal .cursor-explore {
-  width: 100px;
-  height: 100px;
-  background: #00f;
+.sc-metal .video-wrap .cursor-explore {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #bb8d8d;
+  border-radius: 50%;
+}
+.sc-metal .video-wrap .cursor-explore p {
+  font-size: 18px;
+}
+.sc-metal .video-wrap .cursor-explore p em {
+  font-family: "Noto Serif Display", "Roboto", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+.sc-metal .inner {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.sc-metal .inner .subtitle {
+  display: block;
+  font-family: "Noto Serif Display", "Roboto", serif;
+  font-weight: 400;
+  font-size: 6vw;
+  letter-spacing: 0.08em;
 }
 
 .sc-concept {

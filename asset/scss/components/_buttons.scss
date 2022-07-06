@@ -21,7 +21,7 @@
 
 
 // More Button
-.more {
+.btn-more {
     position: relative;
     display: block;
     color: #bb8d8d;
@@ -30,9 +30,10 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.32em;
-}
-.more em {
-    font-family: $font-sub;
-    font-style: italic;
-    font-size: 1.15em;
+
+    em {
+        font-family: $font-sub;
+        font-style: italic;
+        font-size: 1.15em;
+    }
 }
