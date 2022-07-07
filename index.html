@@ -25,22 +25,24 @@
                     </a>
                 </h1>
                 <a href="" class="link-social">DIGITAL FASHION</a>
-                <button class="menu-btn"><span class="blind">메뉴 열림</span></button>
+                <button class="btn-menu"><span class="blind">메뉴 열림</span></button>
             </div>
             <!-- 
             #menu -> group -> area -> wrap -> box
             a -> link-??? btn-??? 
             -->
             <div class="group-menu">
-                <div class="close-area"></div>
+                <div class="close-area">
+                    <button class="btn-close"><span class="blind">메뉴 닫기</span></button>
+                </div>
+                
                 <div class="menu-area">
-                    <button class="close-btn"><span class="blind">메뉴 닫기</span></button>
                     <div class="menu-wrap">
                         <nav>
                             <ul class="menu-list">
-                                <li class="menu-item"><a href="" class="menu-link"><b>Co</b>ncept</a></li>
-                                <li class="menu-item"><a href="" class="menu-link"><b>L</b>ab</a></li>
-                                <li class="menu-item"><a href="" class="menu-link"><b>Co</b>ntact</a></li>
+                                <li class="menu-item"><a href="" class="menu-link"><i>Co</i>ncept</a></li>
+                                <li class="menu-item"><a href="" class="menu-link"><i>L</i>ab</a></li>
+                                <li class="menu-item"><a href="" class="menu-link"><i>Co</i>ntact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -59,7 +61,7 @@
             <div class="container">
 
                 <!-- Visual Section -->
-                <section class="sc-visual visual-wrap">
+                <section class="sc-visual">
                     <div class="common-inner">
                         <div id="visual-image" class="img-box">
                             <img src="./asset/images/main.jpg" alt="NUENO DIGITAL IMAGE">
@@ -95,9 +97,9 @@
                                 only small pieces of the future where Nueno will lead your brand.
                             </p>
                         </div>
-                        <button class="btn-more" data-name="motion">
+                        <button class="btn-more" data-name="motion"><span class="blind">더보기</span>
                             <span>
-                                <em>Re</em>ad more about us
+                                <i>Re</i>ad more about us
                             </span>
                         </button>
                     </div>
@@ -105,13 +107,13 @@
 
                 <!-- Collection Section -->
                 <section class="sc-collection">
-                    <div class="common-inner">
+                    <div class="inner">
                         <h2 data-name="motion" data-x="20" class="title">
                             OUR <br>
                             DIGITAL COLLECTION
                         </h2>
                         
-                        <div data-name="motion" data-x="20" class="slide-num">
+                        <div class="slide-num">
                             NO. <span class="italic">1/7</span>
                         </div>
 
@@ -127,9 +129,9 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="img-wrap">
-                                            <div class="cta drag">
+                                            <div class="cursor-drag">
                                                 <p>
-                                                    <em>Dr</em>ag
+                                                    <i>Dr</i>ag
                                                 </p>
                                             </div>
                                             <img src="https://nuenofashion.com/images/home/collection/1@1x.jpg" alt="">
@@ -178,7 +180,7 @@
                         <div class="video-wrap">
                             <div class="cursor-explore">
                                 <p>
-                                    <em>Ex</em>plore <br>
+                                    <i>Ex</i>plore <br>
                                     Nueno MetalX
                                 </p>
                             </div>
@@ -198,13 +200,9 @@
                     
                     <a href="" class="img-area">
                         <img src="https://nuenofashion.com/images/home/concept@1x.jpg" alt="">
-                        <h2 class="title">
-                            <span>CONC</span>
-                            <span>EPT</span>
-                        </h2>
                         <div class="cursor-explore">
                             <p>
-                                <em>Ex</em>plore <br>
+                                <i>Ex</i>plore <br>
                                 Nueno Concept
                             </p>
                         </div>
@@ -217,7 +215,7 @@
                         </h2>
                         <p class="text">
                             DIGITAL FASHION IS A NEW CHAPTER <br>
-                            <em class="italic">DISCOVER </em>
+                            <i class="italic">DISCOVER </i>
                             NUENO CONCEPT
                         </p>
                         <p class="desc">
@@ -230,7 +228,7 @@
                             Explore the full story of clothes that don’t exist.
                         </p>
                         <a href="" class="link-concept">
-                            <em class="italic">Ex</em>plore Nueno Concept
+                            <i class="italic">Ex</i>plore Nueno Concept
                         </a>
                     </div>
                 </section>
@@ -238,11 +236,11 @@
                 <!-- Lab Section -->
                 <section class="sc-lab">
                     <div class="common-inner lab-top">
-                        <a href="" class="img-wrap">
+                        <a href="" class="img-area">
                             <img data-name="motion" data-x="-20" src="./asset/images/main.jpg" alt="">
                             <div class="cursor-explore">
                                 <p>
-                                    <em>Ex</em>plore <br>
+                                    <i>Ex</i>plore <br>
                                     Nueno Lab
                                 </p>
                             </div>
@@ -255,9 +253,9 @@
                     </div>
                     <div data-name="motion" class="common-inner lab-bottom">
                         
-                        <p data-name="motion" class="text">
+                        <p data-name="motion" data-y="100" class="text">
                             DIGITAL EXPERIENCES FOR FASHION <br>
-                            <em class="italic">DISCOVER</em>
+                            <i class="italic">DISCOVER</i>
                             NUENO LAB
                         </p>
                         <p class="desc-area">
@@ -274,7 +272,7 @@
         
                         </p>
                         <a href="" class="link-lab">
-                            <em class="italic">Ex</em>plore Nueno Lab
+                            <i class="italic">Ex</i>plore Nueno Lab
                         </a>
                     </div>
                 </section>
@@ -331,9 +329,9 @@
                         <div class="articles">
                             <a data-name="motion01" href="" class="link-articles">
                                 <span class="text">
-                                    THE CLOTHES THAT DO<em>N'T</em>
+                                    THE CLOTHES THAT DO<i>N'T</i>
                                     EXIST. WHAT IS
-                                    <em>DIGITAL</em>
+                                    <i>DIGITAL</i>
                                     FASHION /
                                 </span>
                             </a>

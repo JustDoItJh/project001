@@ -143,23 +143,31 @@ main{
 
     .swiper{
         height: 100%;
-        padding: 0 0 0 25vw;
+
         &-slide{
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            width: 100vw;
+            width: 50vw;
+            padding: 0 50%;
             &.text{
                 width: 50vw;
                 p{
-                    max-width: 500px;
+                    max-width: 670px;
                     font-size: 25px;
                     font-weight: 900;
                     letter-spacing: .08em;
                     text-transform: uppercase;
                 }
             }
+            &:nth-child(2) {
+                width: 50vw;
+            }
+        }
+        .white {
+            background: #f8f8f4;
+            color: #191917;
         }
     }
 }
@@ -206,7 +214,7 @@ main{
 
             p {
                 font-size: 25px;
-                em {
+                i {
                     font-family: $font-sub;
                     font-style: italic;
                     font-weight: 400;
@@ -269,7 +277,7 @@ main{
             p {
                 color: #f8f8f4;
                 font-size: 25px;
-                em {
+                i {
                     font-family: $font-sub;
                     font-style: italic;
                     font-weight: 400;
@@ -326,7 +334,7 @@ main{
             margin: 3em 0;
             font-weight: 500;
             font-size: 23px;
-            em {
+            .italic {
                 font-family: $font-sub;
                 font-style: italic;
                 font-weight: 400;
@@ -349,7 +357,7 @@ main{
         padding-top: 10em;
         margin-bottom: 4vw;
 
-        .img-wrap {
+        .img-area {
             position: sticky;
             display: block;
             top: 20vh;
@@ -378,7 +386,7 @@ main{
                 p {
                     color: #f8f8f4;
                     font-size: 25px;
-                    em {
+                    i {
                         font-family: $font-sub;
                         font-style: italic;
                         font-weight: 400;
@@ -532,7 +540,7 @@ main{
 
             .text {
                 transition: color .3s;
-                em { font-style: italic; }
+                i { font-style: italic; }
 
                 &:hover {
                     color: #bb8d8d;

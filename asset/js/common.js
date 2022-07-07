@@ -33,13 +33,13 @@ $(function(){
     // Menu Button
     
 
-    $('.menu-btn').click(function(){
-        // $('.nav-area').animate({'left':0},300)
+    $('.btn-menu').click(function(){
+        // $('.group-menu').animate({'left':0},300)
         $('.group-menu').addClass('active')
     })
 
-    $('.close-btn').click(function(){
-        // $('.nav-area').animate({'left':'-100%'},300)
+    $('.btn-close').click(function(){
+        // $('.group-menu').animate({'left':'-100%'},300)
         $('.group-menu').removeClass('active')
     })
     
@@ -85,6 +85,18 @@ $(function(){
         gsap.to('.cursor-explore',0.8,{
             x: e.offsetX - cursorWidth2,
             y: e.offsetY - cursorHeight2
+        })
+
+    });
+
+    const cursorWidth3 = $('.cursor-explore').width()/2;
+    const cursorHeight3 = $('.cursor-explore').height()/2;
+    $('.img-area').mousemove(function(e){
+
+        $('.circle').addClass('hide');
+        gsap.to('.cursor-explore',0.8,{
+            x: e.offsetX - cursorWidth3,
+            y: e.offsetY - cursorHeight3
         })
 
     });

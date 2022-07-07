@@ -61,7 +61,7 @@ $(function(){
     scrollMotion.forEach(a => {
 
       motion01 = gsap.from(a,{
-        opacity: .7,
+        opacity: 1,
         y : 100,
         stagger: 0.1
       })
