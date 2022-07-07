@@ -19,7 +19,7 @@ $(function(){
     });
 
     
-    const  logo = gsap.from('.highlights-wrap .logo',{
+    const  logo = gsap.from('.sc-highlights .logo',{
       opacity: 0,
       y: 100,
       stagger:0.1
@@ -27,7 +27,7 @@ $(function(){
 
     // 특정영역에서 트리거
     ScrollTrigger.create({
-      trigger: ".highlights-wrap",
+      trigger: ".sc-highlights",
       start: "top 50%", //[트리거기준 , 윈도우기준]
       end: "bottom top", //[트리거기준 , 윈도우기준]
       markers: true,
@@ -39,11 +39,51 @@ $(function(){
       toggleActions: "play pause pause reset"
     })
 
+
+    const  concept = gsap.from('.content-area .text .desc',{
+      opacity: 0,
+      y: 100,
+      stagger:0.1
+    })
+
+    // 특정영역에서 트리거
+    ScrollTrigger.create({
+      trigger: ".content-area",
+      start: "top top", //[트리거기준 , 윈도우기준]
+      end: "bottom top", //[트리거기준 , 윈도우기준]
+      markers: true,
+      animation: concept,
+      toggleActions: "play pause pause reset"
+    })
+
+
+    const scrollMotion = document.querySelectorAll('[data-name*="motion01"]')
+    scrollMotion.forEach(a => {
+
+      motion01 = gsap.from(a,{
+        opacity: .7,
+        y : 100,
+        stagger: 0.1
+      })
+
+      // 특정영역에서 트리거
+      ScrollTrigger.create({
+        trigger: a,
+        start: "top top", //[트리거기준 , 윈도우기준]
+        end: "bottom top", //[트리거기준 , 윈도우기준]
+        markers: true,
+        animation: motion01,
+        toggleActions: "play pause pause reset"
+      })
+
+    })
+
+
     const motionElement = document.querySelectorAll('[data-name*="motion"]')
     motionElement.forEach(element => {
 
 
-      yVal = (element.dataset.y) ? element.dataset.y : 100;
+      yVal = (element.dataset.y) ? element.dataset.y : 0;
       xVal = (element.dataset.x) ? element.dataset.x : 0;
 
 

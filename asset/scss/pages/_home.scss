@@ -1,6 +1,5 @@
 .main-wrap {
     position: relative;
-    
 }
 main{
     text-align: center;
@@ -34,19 +33,20 @@ main{
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            font-size: 21vw;
             letter-spacing: -.0033em;
 
             .text {
                 display: block;
                 font-weight: 900;
                 line-height: 0.85;
+                font-size: 25vw;
             }
             .italic {
                 font-family: $font-sub;
                 font-weight: 100;
                 line-height: 0.9;
                 z-index: 2;
+                font-size: 21vw;
             }
         }
     }
@@ -67,7 +67,7 @@ main{
         text-align: center;
         font-family: $font-main;
         font-weight: 900;
-        font-size: 20px;
+        font-size: 25px;
         line-height: 1.5em;
         letter-spacing: .05em;
 
@@ -92,11 +92,12 @@ main{
         padding-top: 70px;
 
         .paragraph {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             padding-bottom: 2.5em;
-            font-size: 16px;
+            font-size: 20px;
             line-height: 1.3em;
+            letter-spacing: .08em;
         }
     }
     .desc-more {
@@ -123,7 +124,7 @@ main{
         font-weight: 900;
         line-height: 1em;
         letter-spacing: .1em;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .slide-num {
@@ -153,8 +154,9 @@ main{
                 width: 50vw;
                 p{
                     max-width: 500px;
-                    font-size: 16px;
+                    font-size: 25px;
                     font-weight: 900;
+                    letter-spacing: .08em;
                     text-transform: uppercase;
                 }
             }
@@ -190,7 +192,7 @@ main{
 
         .cursor-explore{
             position: absolute;
-            top: 0; left: 0;
+            top: 50px; left: -80px;
             z-index: 1;
             pointer-events: none;
             display: flex;
@@ -203,12 +205,12 @@ main{
             border-radius: 50%;
 
             p {
-                font-size: 18px;
+                font-size: 25px;
                 em {
                     font-family: $font-sub;
                     font-style: italic;
                     font-weight: 400;
-                    font-size: 1.25em;
+                    font-size: 1em;
                 }
             }
         }
@@ -239,26 +241,96 @@ main{
 // ----------------------- Section Concept -----------------------
 .sc-concept {
     display: flex;
-    .img-wrap {
+
+    .img-area {
         position: sticky;
         top: 0;
         height: 100vh;
         width: 50%;
+
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
+        .cursor-explore {
+            position: absolute;
+            top: 50%; left: 60%;
+            z-index: 1;
+            pointer-events: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 160px;
+            border: 1px solid #bb8d8d;
+            border-radius: 50%;
+            p {
+                color: #f8f8f4;
+                font-size: 25px;
+                em {
+                    font-family: $font-sub;
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 1em;
+                }
+            }
+        }
     }
-    .content-wrap {
-        padding: 0 50px;
+    .content-area {
+        width: 50%;
+        padding: 0 3vw;
         flex: 1;
+        background: #f8f8f4;
+
         .title {
-            font-size: 10vw;
+            text-align: center;
+            font-size: 28vw;
             font-family: $font-main;
+            font-weight: 900;
+            letter-spacing: .008em;
+            line-height: 1.2em;
             span {
                 display: block;
                 white-space: nowrap;
+            }
+        }
+        .text {
+            text-align: left;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: .05em;
+            line-height: 1.2em;
+            margin: 12em 0;
+            .italic {
+                font-family: $font-sub;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 23px;
+            }
+        }
+        .desc {
+            text-align: left;
+            text-transform: uppercase;
+            
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: .05em;
+            line-height: 1.2em;
+        }
+        .link-concept {
+            display: block;
+            text-align: left;
+            color: #bb8d8d;
+            margin: 3em 0;
+            font-weight: 500;
+            font-size: 23px;
+            em {
+                font-family: $font-sub;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 1em;
             }
         }
     }
@@ -266,193 +338,206 @@ main{
 
 
 
-
-
-
-
 // ----------------------- Section Lab -----------------------
-.lab-wrap {
+.sc-lab {
     position: relative;
     background: #191917;
     color: #f8f8f4;
     z-index: 2;
-}
-.lab-wrap .lab-top {
-    padding-top: 10em;
-}
-@media (min-width: 768px) {
+
     .lab-top {
-        position: relative;
+        padding-top: 10em;
         margin-bottom: 4vw;
-    }
-    .lab-wrap .lab-top .img-wrap {
-        top: 15vh;
-        width: 75%;
-        position: sticky;
-        display: block;
-    }
-    .lab-top .title {
-        margin-bottom: 0.5em;
-        font-size: 25vw;
-        position: absolute;
-        top: 5%; right: 11%;
-    }
-    .lab-bottom .desc {
-        font-size: 20px;
-        margin-bottom: 7em;
-    }
-    .lab-bottom .article-title {
-        font-size: 4em;
-    }
-    .lab-bottom .text .right {
-        text-align: right;
-    }
-    .lab-bottom .link {margin: 7em 0;}
-}
-@media (max-width: 767px) {
-    .lab-top .title {
-        position: absolute;
-        top: 5px; right: 10px;
-        font-size: 30vw;
-    }
-    .lab-bottom .desc {
-        font-size: 13px;
-        margin: 7em 0;
-    }
-    .lab-bottom .article-title {
-        text-align: left;
-        font-size: 2em;
-    }
-}
-.lab-wrap .lab-top .img-wrap {
-    width: 100%;
-}
-.lab-top .img-wrap img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: 100%;
-    transition-duration: 1s;
-}
-.lab-top .img-wrap .explore {
-    position: absolute;
-    top: 55%; left: 37%; 
-}
-.lab-top .title {
-    letter-spacing: .008em;
-    z-index: 2;
-    line-height: 1;
-    overflow: hidden;
-    font-weight: 900;
-    transition-duration: 1s;
-}
 
-.lab-bottom {
-    overflow-x: hidden;
-    padding: 0 2em;
-}
-.lab-bottom .desc {
-    font-weight: 900;
-    line-height: 1.5em;
-    letter-spacing: .05em;
-    transition-duration: 1s;
-}
-.lab-bottom .desc .italic {
-    font-family: $font-sub;
-    font-style: italic;
-    font-weight: 400;
-}
+        .img-wrap {
+            position: sticky;
+            display: block;
+            top: 20vh;
+            width: 30%;
+            margin: 0 auto;
+            margin-top: 8vw;
+            margin-bottom: -10vw;
 
-.lab-bottom .text .block {
-    display: block;
-    transition-duration: 1s;
-}
-.lab-bottom .text .block strong {
-    font-family: $font-main;
-    font-weight: 900;
-}
-.lab-bottom .text .block em {
-    font-family: $font-sub;
-    font-style: italic;
-}
-.lab-bottom .text .left {
-    text-align: left;
-}
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .cursor-explore {
+                position: absolute;
+                top: 0; left: 0;
+                z-index: 3;
+                pointer-events: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 160px;
+                height: 160px;
+                border: 1px solid #bb8d8d;
+                border-radius: 50%;
+                p {
+                    color: #f8f8f4;
+                    font-size: 25px;
+                    em {
+                        font-family: $font-sub;
+                        font-style: italic;
+                        font-weight: 400;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        .title {
+            position: absolute;
+            top: 0%; right: 18%;
+            text-align: left;
+            font-size: 33vw;
+            font-weight: 800;
+            letter-spacing: .008em;
+            overflow: hidden;
+            line-height: 1em;
+        }
 
-.lab-bottom .text .italic {
-    display: inline-block;
-    text-align: left;
-    font-style: italic;
-    font-size: 26px;
-}
-.lab-bottom .link {
-    position: relative;
-    display: block;
-    text-align: center;
-    color: #bb8d8d;
-    margin: 7em auto;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.32em;
-    transition-duration: 1s;
-}
-.lab-bottom .link .italic {
-    font-family: $font-sub;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.25em;
+    }
+
+    .lab-bottom {
+        overflow-x: hidden;
+        padding: 25em 3em 0;
+
+        .text {
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 1.2em;
+            letter-spacing: .05em;
+
+            .italic {
+                font-family: $font-sub;
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+        .desc-area {
+            font-family: $font-sub;
+            font-size: 55px;
+            font-weight: 400;
+            line-height: 1em;
+            letter-spacing: .05em;
+            margin: 2em 0;
+            
+            b {
+                font-family: $font-main;
+                font-weight: 800;
+                letter-spacing: .1em;
+            }
+            i {
+                font-style: italic;
+            }
+            .right {
+                text-align: right;
+                display: block;
+                
+            }
+            .left {
+                text-align: left;
+                display: block;
+                .italic {
+                    font-size: 26px;
+                    font-style: italic;
+                }
+            }
+        }
+        .link-lab {
+            display: block;
+            text-align: center;
+            color: #bb8d8d;
+            margin: 7em auto;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.3em;
+
+            .italic {
+                font-family: $font-sub;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 1em;
+            }
+        }
+    }
 }
 
 
 // ----------------------- Section Hightlights -----------------------
-.wrapper {
+.sc-highlights {
     position: relative;
     background: #f8f8f4;
     height: 100vh;
 }
-.wrapper .title {
-    padding: 14vh 0 25vh;
+.sc-highlights .title {
+    padding: 14vh 0 20vh;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.3em;
-    
 }
-.highlights-wrap .logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.highlights-wrap .logo {
-    display: block;
-    width: 343px; height: 180px;
-    margin-bottom: 5em;
-    
-}
-.highlights-wrap .logo img {
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-    transform: scale(.5);
+.sc-highlights {
+    .common-inner {
+        padding: 0 30em;
+    }
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            flex: 1 1 30%;
+            height: 0;
+            padding-bottom: 20%;
+            display: block;
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                object-fit: contain;
+                transform: scale(.7);
+            }
+        }
+    }
+
 }
 
 // ----------------------- Section Articles -----------------------
-.articles {
-    text-align: left;
-    padding: 0 10vw;
-}
-.articles .article-title {
-    font-family: $font-sub;
-    font-weight: 400;
-    line-height: 1.018em;
-    letter-spacing: .036em;
-    font-size: 4em;
-}
-.articles .link-title {
-    transition: color .3s;
-}
-.articles .link-title:hover {
-    color: #bb8d8d;
-}
-.articles .link-title em {
-    font-style: italic;
+.sc-articles {
+    position: relative;
+    background: #f8f8f4;
+    height: 100vh;
+
+    .title {
+        padding: 14vh 0 25vh;
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 1.3em;
+    }
+    .articles {
+        text-align: left;
+        padding: 0 10vw;
+
+        .link-articles {
+            font-family: $font-sub;
+            font-weight: 400;
+            line-height: 1.018em;
+            letter-spacing: .036em;
+            font-size: 4em;
+
+            .text {
+                transition: color .3s;
+                em { font-style: italic; }
+
+                &:hover {
+                    color: #bb8d8d;
+                }
+            }
+        }
+    }
 }
