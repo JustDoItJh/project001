@@ -497,10 +497,8 @@ main {
 .sc-metal .video-wrap {
   z-index: 20;
   position: relative;
-  width: 400px;
-  height: 700px;
+  width: 30%;
   margin: 0 auto;
-  overflow: hidden;
 }
 .sc-metal .video-wrap .cursor-explore {
   position: absolute;
@@ -526,12 +524,15 @@ main {
   font-weight: 400;
   font-size: 1.25em;
 }
+.sc-metal .video-wrap img {
+  max-width: 100%;
+  height: auto;
+}
 .sc-metal .inner {
   position: absolute;
-  top: 35%;
+  top: 45%;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
 }
 .sc-metal .inner .subtitle {
   display: block;
@@ -539,6 +540,9 @@ main {
   font-weight: 400;
   font-size: 6vw;
   letter-spacing: 0.08em;
+}
+.sc-metal .inner .subtitle:last-child {
+  z-index: 22;
 }
 
 .sc-concept {

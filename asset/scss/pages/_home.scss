@@ -185,10 +185,8 @@ main{
     .video-wrap{
         z-index: 20;
         position: relative;
-        width: 400px;
-        height: 700px;
+        width: 30%;
         margin: 0 auto;
-        overflow: hidden;
 
         .cursor-explore{
             position: absolute;
@@ -214,12 +212,15 @@ main{
                 }
             }
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
     .inner {
         position: absolute;
-        top: 35%; left: 50%;
+        top: 45%; left: 50%;
         transform: translateX(-50%);
-        overflow: hidden;
         
         .subtitle {
             display: block;
@@ -227,6 +228,9 @@ main{
             font-weight: 400;
             font-size: 6vw;
             letter-spacing: .08em;
+            &:last-child {
+                z-index: 22;
+            }
         }
     }
 }

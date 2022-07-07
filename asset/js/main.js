@@ -43,7 +43,7 @@ $(function(){
     motionElement.forEach(element => {
 
 
-      yVal = (element.dataset.y) ? element.dataset.y : 0;
+      yVal = (element.dataset.y) ? element.dataset.y : 100;
       xVal = (element.dataset.x) ? element.dataset.x : 0;
 
 
