@@ -5,361 +5,302 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N U E N O</title>
+    <title>네이버 웹툰</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
-    <div class="main-wrap">
+    <!-- header -->
+    <header class="header">
+        <div class="gnb-area">
+            <h1 class="logo"><span class="blind">네이버</span></h1>
+            <a href="" class="link-webtoon">웹툰</a>
+            <a href="" class="link-webnovel">웹소설</a>
+            <a href="" class="link-webseries">시리즈</a>
+        </div>
+        <a href="" class="link-search"><span class="blind">검색 페이지로 이동</span></a>
+        <a href="" class="link-my"><span class="blind">MY PAGE로 이동</span></a>
 
-        <!-- Mouse Cursor Point -->
-        <div class="circle"></div>
+        <div class="lnb-area">
+            <ul class="lnb-list">
+                <li class="lnb-item">
+                    <a href="" class="link"><span class="text">홈</span></a>
+                </li>
+                <li class="lnb-item">
+                    <a href="" class="link"><span class="text">요일별</span></a>
+                </li>
+                <li class="lnb-item">
+                    <a href="" class="link"><span class="text">완결작</span></a>
+                </li>
+                <li class="lnb-item">
+                    <a href="" class="link"><span class="text">베스트도전</span></a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-        <!-- Header -->
-        <header class="header">
+    <!-- main contents -->
+    <main class="main">
+        <hr>
 
-            <div class="inner">
-                <h1 class="logo">
-                    <a href="" class="link-logo">
-                      <span>N U E N </span><span class="italic">O</span>
-                    </a>
-                </h1>
-                <a href="" class="link-social">DIGITAL FASHION</a>
-                <button class="btn-menu"><span class="blind">메뉴 열림</span></button>
+        <!-- 최근 본 웹툰 Section -->
+        <section class="sc-latest">
+            <div class="lastest-head">
+                <h2 class="title">최근 본 웹툰</h2>
+                <a href="" class="link-mark"><span class="blind">동기화 링크</span></a>
+                <a href="" class="link-more"><span class="blind">최근 본 웹툰 목록으로 이동</span>4</a>
             </div>
-            <!-- 
-            #menu -> group -> area -> wrap -> box
-            a -> link-??? btn-??? 
-            -->
-            <div class="group-menu">
-                <div class="close-area">
-                    <button class="btn-close"><span class="blind">메뉴 닫기</span></button>
-                </div>
-                
-                <div class="menu-area">
-                    <div class="menu-wrap">
-                        <nav>
-                            <ul class="menu-list">
-                                <li class="menu-item"><a href="" class="menu-link"><i>Co</i>ncept</a></li>
-                                <li class="menu-item"><a href="" class="menu-link"><i>L</i>ab</a></li>
-                                <li class="menu-item"><a href="" class="menu-link"><i>Co</i>ntact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="media-area">
-                        <a href="" class="link-media">Instagram</a>
-                        <a href="" class="link-media">Medium</a>
-                        <span class="italic">( n )</span>
-                    </div>
+            <div class="lastest-cont">
+                <ul class="lastest-list">
+                    <li class="lastest-item">
+                        <a href="" class="link">
+                            <div class="thumb">
+                                <img src="" alt="">
+                            </div>
+                            <strong class="title">나 혼자 만렙 뉴비</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 웹툰 이미지 배너 -->
+        <section class="sc-banner">
+            <a href="" class="link">
+                <img src="" alt="">
+            </a>
+        </section>
+
+        <!-- 실시간랭킹 TOP10 Section -->
+        <section class="sc-top10">
+            <div class="top10-head">
+                <h2 class="title">실시간랭킹 TOP10</h2>
+                <div class="switch-box">
+                    <button class="btn-switch">웹툰</button>
+                    <button class="btn-switch">베스트도전</button>
                 </div>
             </div>
-        </header>
-
-
-        <!-- Main -->
-        <main class="main">
-            <div class="container">
-
-                <!-- Visual Section -->
-                <section class="sc-visual">
-                    <div class="common-inner">
-                        <div id="visual-image" class="img-box">
-                            <img src="./asset/images/main.jpg" alt="NUENO DIGITAL IMAGE">
-                        </div>
-                        <h2 class="txt-box">
-                            <span data-name="motion" data-y="100" class="text">WHERE</span>
-                            <span data-name="motion" data-y="100" class="italic">DIGITAL</span>
-                            <span data-name="motion" data-y="100" class="text">MEETS</span>
-                            <span data-name="motion" data-y="100" class="text">FASHION</span>
-                        </h2>
-                    </div>
-                </section>
-
-                <!-- Description Aside -->
-                <aside class="sc-description">
-                    <div class="common-inner">
-                        <strong class="desc" data-name="motion">
-                            WE ARE A
-                            <span class="underline">DIGITAL FASHION HOUSE</span>
-                            THAT MIXES TECHNOLOGY AND CREATIVITY <br>
-                            TO TAKE FASHION BEYOND ONLY-PHYSICAL EXPERIENCES.
-                            <span class="italic">( n )</span>
-                        </strong>
-                        <div id="hide-text" class="desc-more">
-                            <!-- id 쓸땐 camelCase  -->
-                            <p class="paragraph">
-                                We have established Nueno Concept as the first Polish brand of clothes
-                                that don’t exist &amp; Nueno Lab to conduct digital experiments with
-                                fashion creators. We want to inspire you and pave the way for a
-                                digital fashion future.
-                                <br><br>
-                                Digitally tailored clothes, AR extended clothes, online trying-ons are
-                                only small pieces of the future where Nueno will lead your brand.
-                            </p>
-                        </div>
-                        <button class="btn-more" data-name="motion"><span class="blind">더보기</span>
-                            <span>
-                                <i>Re</i>ad more about us
-                            </span>
-                        </button>
-                    </div>
-                </aside>
-
-                <!-- Collection Section -->
-                <section class="sc-collection">
-                    <div class="inner">
-                        <h2 data-name="motion" data-x="20" class="title">
-                            OUR <br>
-                            DIGITAL COLLECTION
-                        </h2>
-                        
-                        <div class="slide-num">
-                            NO. <span class="italic">1/7</span>
-                        </div>
-
-                        <div class="slider">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div data-name="motion" data-x="20" class="swiper-slide text">
-                                        <p>
-                                            Explore our photoshoot with clothes that don't exist. Watch how our
-                                            model plays with a digital garment and let us introduce the future
-                                            of fashion to you.
+            <div class="top10-cont">
+                <div class="webtoon-area"> <!-- 랭킹1~5위 페이지 옆으로 넘김 -->
+                    <ul class="webtoon-list">
+                        <li class="webtoon-item">
+                            <a href="" class="link">
+                                <div class="thumb">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="info">
+                                    <em class="rank">1</em>
+                                    <div class="text-box">
+                                        <p class="text-main">
+                                            <strong class="title">2022 스크롤금지</strong>
+                                            <span class="ic-up"><span class="blind">up</span></span>
                                         </p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="img-wrap">
-                                            <div class="cursor-drag">
-                                                <p>
-                                                    <i>Dr</i>ag
-                                                </p>
-                                            </div>
-                                            <img src="https://nuenofashion.com/images/home/collection/1@1x.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="img-wrap">
-                                            <img src="https://nuenofashion.com/images/home/collection/2@1x.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide white">
-                                        <div class="img-wrap">
-                                            <img src="https://nuenofashion.com/images/home/collection/3@1x.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide white">
-                                        <div class="img-wrap">
-                                            <img src="https://nuenofashion.com/images/home/collection/4@1x.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="img-wrap">
-                                            <img src="https://nuenofashion.com/images/home/collection/5@1x.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide white">
-                                        <div class="img-wrap">
-                                            <img src="https://nuenofashion.com/images/home/collection/6@1x.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide white">
-                                        <div class="img-wrap">
-                                            <img src="https://nuenofashion.com/images/home/collection/7@1x.jpg" alt="">
-                                        </div>
+                                        <p class="text-sub">11.안귀 - 이언 작가</p>
                                     </div>
                                 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 이달의 신작 Section -->
+        <section class="sc-new">
+            <div class="new-head">
+                <h2 class="title">이달의 신작</h2>
+                <div class="num-box">
+                    <em class="curr-page">
+                        <span class="blind">현재</span>
+                        <span>1</span>
+                    </em>
+                    <span class="blind">전체</span>
+                    / 41
+                </div>
+            </div>
+            <div class="new-cont">
+                <div class="webtoon-area">
+                    <ul class="webtoon-list">
+                        <li class="webtoon-item">
+                            <a href="" class="link">
+                                <div class="info">
+                                    <strong class="title">홍 의관의 은밀한 비밀</strong>
+                                    <span class="author">유계진 / 서이나</span>
+                                    <p class="desc">명줄을 보는 여인과 명줄조차 보이지 않는 사내</p>
+                                </div>
+                                <div class="thumb">
+                                    <img src="" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 연령별/성별 실시간 랭킹 Section -->
+        <section class="sc-age">
+            <h2 class="title">연령별·성별 실시간 랭킹</h2>
+            <div class="group-area">
+                <div class="group-wrap">
+                    <button class="btn-switch">10대여자</button>
+                    <button class="btn-switch">10대남자</button>
+                    <button class="btn-switch">20대여자</button>
+                    <button class="btn-switch">20대남자</button>
+                    <button class="btn-switch">30대여자</button>
+                    <button class="btn-switch">30대남자</button>
+                </div>
+            </div>
+            <div class="age-cont">
+                <div class="webtoon-area">  <!-- 연령별·성별 div -->
+                    <ul class="webtoon-list">
+                        <li class="webtoon-item">
+                            <a href="" class="link">
+                                <div class="thumb">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="info">
+                                    <em class="rank">1</em>
+                                    <div class="text-box">
+                                        <strong class="title">외모지상주의</strong>
+                                        <p class="author">박태준</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 웹툰 이미지 배너 -->
+        <section class="sc-banner">
+            <a href="" class="link">
+                <img src="" alt="">
+            </a>
+        </section>
+
+        <!-- 무료로 볼 마지막 기회 Section -->
+        <section class="sc-container">
+            <h2 class="title">무료로 볼 마지막 기회!</h2>
+            <div class="webtoon-area">
+                <ul class="webtoon-list">
+                    <li class="webtoon-item">
+                        <a href="" class="link">
+                            <div class="thumb">
+                                <img src="" alt="">
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Metal Section -->
-                <section class="sc-metal">
-                    <div class="common-inner">
-                        <h2 class="title">NEW</h2>
-                        <div class="video-wrap">
-                            <div class="cursor-explore">
-                                <p>
-                                    <i>Ex</i>plore <br>
-                                    Nueno MetalX
-                                </p>
-                            </div>
-                            <img src="./asset/images/metal.jpg" alt="">
-                        </div>
-                        
-                        <div class="inner">
-                            <span class="subtitle">COLLECTION</span>
-                            <span class="subtitle">COLLECTION</span>
-                            <span class="subtitle">COLLECTION</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Concept Section -->
-                <section class="sc-concept">
-                    
-                    <a href="" class="img-area">
-                        <img src="https://nuenofashion.com/images/home/concept@1x.jpg" alt="">
-                        <div class="cursor-explore">
-                            <p>
-                                <i>Ex</i>plore <br>
-                                Nueno Concept
-                            </p>
-                        </div>
-                    </a>
-
-                    <div class="content-area">
-                        <h2 class="title">
-                            <span>CONC</span>
-                            <span>EPT</span>
-                        </h2>
-                        <p class="text">
-                            DIGITAL FASHION IS A NEW CHAPTER <br>
-                            <i class="italic">DISCOVER </i>
-                            NUENO CONCEPT
-                        </p>
-                        <p class="desc">
-                            There is nothing more important than the act of pushing your
-                            imagination forward.
-                            <br><br>
-                            We created digital clothes that exist only in the digital world - and
-                            all that we used to do so is our creativity and the digital cloths.
-                            <br><br>
-                            Explore the full story of clothes that don’t exist.
-                        </p>
-                        <a href="" class="link-concept">
-                            <i class="italic">Ex</i>plore Nueno Concept
+                            <strong class="title">피라미드 게임</strong>
+                            <p class="author">달꼬냑</p>
                         </a>
-                    </div>
-                </section>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-                <!-- Lab Section -->
-                <section class="sc-lab">
-                    <div class="common-inner lab-top">
-                        <a href="" class="img-area">
-                            <img data-name="motion" data-x="-20" src="./asset/images/main.jpg" alt="">
-                            <div class="cursor-explore">
-                                <p>
-                                    <i>Ex</i>plore <br>
-                                    Nueno Lab
-                                </p>
+        <!-- 웹툰 이미지 배너 -->
+        <section class="sc-banner">
+            <a href="" class="link">
+                <img src="" alt="">
+            </a>
+        </section>
+
+        <!-- 소설의 감동을 웹툰으로! Section -->
+        <section class="sc-container">
+            <h2 class="title">소설의 감동을 웹툰으로!</h2>
+            <div class="webtoon-area">
+                <ul class="webtoon-list">
+                    <li class="webtoon-item">
+                        <a href="" class="link">
+                            <div class="thumb">
+                                <img src="" alt="">
                             </div>
+                            <strong class="title">이계진입 리로디드</strong>
+                            <p class="author">차우민 / 쵸쵸 / 임경배</p>
                         </a>
-                        <h2 data-name="motion" data-x="20" class="title">
-                            <span>
-                                LA <br> B
-                            </span>
-                        </h2>
-                    </div>
-                    <div data-name="motion" class="common-inner lab-bottom">
-                        
-                        <p data-name="motion" data-y="100" class="text">
-                            DIGITAL EXPERIENCES FOR FASHION <br>
-                            <i class="italic">DISCOVER</i>
-                            NUENO LAB
-                        </p>
-                        <p class="desc-area">
-                            <span data-name="motion" data-x="20" class="right">
-                                WE MERGE THE <b>DIGITAL</b> <br>
-                                POSSIBILITIES AND <br>
-                                THE NEEDS <i>OF</i> FASHION <br>
-                                BRANDS TO CREATE <br>
-                            </span>
-                            <span data-name="motion" data-x="-20" class="left">
-                                <b>NEW KINDS</b> <i>OF</i> EXPERIENCES. <br>
-                                <span class="italic">(n)</span>
-                            </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
         
-                        </p>
-                        <a href="" class="link-lab">
-                            <i class="italic">Ex</i>plore Nueno Lab
-                        </a>
-                    </div>
-                </section>
+        <!-- 배너 -->
+        <a href="" class="banner">
+            <img src="" alt="">
+        </a>
 
-                <!-- Highlights Section -->
-                <section class="sc-highlights wrapper">
-                    <div class="common-inner">
-                        <h2 class="title">OUR HIGHLIGHTS</h2>
-                        <div class="logos">
-                            <a href="" class="logo">
-                                <span class="blind">Vogue</span>
-                                <img src="./asset/images/logo01.png" alt="" width="343" height="180">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">K MAG MAGAZYN</span>
-                                <img src="./asset/images/logo02.png" alt="" width="147" height="147">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">newonce</span>
-                                <img src="./asset/images/logo03.png" alt="" width="283" height="61">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">INNPoland</span>
-                                <img src="./asset/images/logo04.png" alt="" width="345" height="85">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">Wirtualna Polska</span>
-                                <img src="./asset/images/logo05.png" alt="" width="113" height="68">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">Gazeta.pl</span>
-                                <img src="./asset/images/logo06.png" alt="" width="269" height="64">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">Pismo.</span>
-                                <img src="./asset/images/logo07.png" alt="" width="272" height="116">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">Chillizet</span>
-                                <img src="./asset/images/logo08.png" alt="" width="201" height="48">
-                            </a>
-                            <a href="" class="logo">
-                                <span class="blind">naTemat</span>
-                                <img src="./asset/images/logo09.png" alt="" width="249" height="42">
-                            </a>
-                        </div>
-                    </div>
-                </section>
+        <!-- 링크 사이트 -->
+        <ul class="site-list">
+            <li class="site-item"><a href="">웹툰</a></li>
+            <li class="site-item"><a href="">웹소설</a></li>
+            <li class="site-item"><a href="">시리즈</a></li>
+            <li class="site-item"><a href="">시리즈온</a></li>
+        </ul>
 
-                <!-- Articles Section -->
-                <section class="sc-articles wrapper">
-                    <div class="common-inner">
-                        <h2 class="title">OUR ARTICLES</h2>
-                        <div class="articles">
-                            <a data-name="motion01" href="" class="link-articles">
-                                <span class="text">
-                                    THE CLOTHES THAT DO<i>N'T</i>
-                                    EXIST. WHAT IS
-                                    <i>DIGITAL</i>
-                                    FASHION /
-                                </span>
-                            </a>
-                            <a data-name="motion01" href="" class="link-articles">
-                                <span class="text">
-                                    HOW TO GET CLOSER TO CUSTOMERS? AR USED BY FASHION BRANDS. /
-                                </span>
-                            </a>
-                            <a data-name="motion01" href="" class="link-articles">
-                                <span class="text">VOGUE TAIWAN EXAMPLES.</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
+        <!-- footer info -->
+        <div class="info-area">
+            <div class="info-service">
+                <ul class="service-list">
+                    <li class="service-item"><a href="">로그인</a></li>
+                    <li class="service-item"><a href="">PC버전</a></li>
+                    <li class="service-item"><a href="">전체서비스</a></li>
+                </ul>
             </div>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-area">
-                <p>
-                    <span>&copy; 2022</span>
-                    <span>Nueno All Rights Reserved.</span>
-                </p>
-                <span class="italic">( n )</span>
+            <div class="info-hide">
+                <button class="btn-info">네이버웹툰(유) 사업자 정보</button>
+                <div class="hide-desc">
+                    <ul>
+                        <li>사업자 등록번호 : 669-86-01888</li>
+                        <li>통신판매업 신고번호 : 2020-성남분당B-0719</li>
+                        <li>대표이사 : 김준구</li>
+                        <li>주소 : 경기도 성남시 분당구 분당내곡로 117, 9층 (백현동)</li>
+                        <li>고객센터 : 1588-3820</li>
+                        <li>이메일 : ccnaver@naver.com</li>
+                    </ul>
+                    <a href="" class="link-info">사업자 등록정보</a>
+                </div>
             </div>
-        </footer>
-    </div>
+            <p class="info-desc">
+                모든 콘텐츠의 저작권은 저작권자 또는 제공처에 있으며, <br>
+                이를 무단으로 이용하는 경우 관련 법령에 따라 법적 책임을 질 수 있습니다.
+            </p>
+            <div class="info-corp top">
+                <ul>
+                    <li>네이버웹툰 이용약관</li>
+                    <li>전용상품권 이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>청소년보호정책</li>
+                    <li>웹툰 고객센터</li>
+                    <li>오류신고</li>
+                </ul>
+                <address>
+                    <a href="" class="link-addr">&copy;NAVER WEBTOON Limited.</a>
+                </address>
+            </div>
+            <div class="info-corp bottom">
+                <ul>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>고객센터</li>
+                    <li>결제도용신고</li>
+                    <li>저작권침해신고</li>
+                </ul>
+                <address>
+                    <a href="" class="link-addr">&copy; NAVER CORP.</a>
+                </address>
+            </div>
+
+            <!-- top button -->
+            <button class="btn-top"><span class="blind">top button</span></button>
+        </div>
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
