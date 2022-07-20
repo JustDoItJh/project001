@@ -8,8 +8,8 @@ main{
 // ----------------------- Visual Section -----------------------
 .sc-visual {
     position: relative;
-    background: #191917;
-    color: #f8f8f4;
+    background-image: url(../images/sec1.jpg);
+    color: #1e4aee;
     z-index: 3;
     
     .common-inner {
@@ -19,7 +19,7 @@ main{
             position: sticky;
             top: 20vh;
             z-index: 1;
-            width: 30%;
+            width: 28%;
             margin: 0 auto;
 
             img {
@@ -50,61 +50,61 @@ main{
             }
         }
     }
-}
-
-
-
-// ----------------------- Description Aside -----------------------
-.sc-description{
-    position: relative;
-    color: #f8f8f4;
-    background: #191917;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-
-    .desc {
-        text-align: center;
-        font-family: $font-main;
-        font-weight: 900;
-        font-size: 25px;
-        line-height: 1.5em;
-        letter-spacing: .05em;
-
-        .underline {
-            background-image: linear-gradient(#bb8d8d, #bb8d8d);
-            background-position: 0 100%;
-            background-repeat: no-repeat;
-            background-size: 100% 2px;
+    // ----------------------- Description Aside -----------------------
+    .sc-description{
+        position: relative;
+        color: #191917;
+        display: flex;
+        align-items: center;
+        padding-bottom: 30px;
+        top: -100px;
+    
+        .desc {
+            text-align: center;
+            font-family: $font-main;
+            font-weight: 900;
+            font-size: 25px;
+            line-height: 1.5em;
+            letter-spacing: .05em;
+    
+            .underline {
+                background-image: linear-gradient(#bb8d8d, #bb8d8d);
+                background-position: 0 100%;
+                background-repeat: no-repeat;
+                background-size: 100% 2px;
+            }
+            .italic {
+                font-family: $font-sub;
+                font-weight: 400;
+                white-space: nowrap;
+                letter-spacing: 0;
+                font-style: italic;
+                font-size: 26px;
+            }
         }
-        .italic {
-            font-family: $font-sub;
-            font-weight: 400;
-            white-space: nowrap;
-            letter-spacing: 0;
-            font-style: italic;
-            font-size: 26px;
-        }
-    }
-    #hide-text {
-        display: none;
-        margin: 0 auto;
-        padding-top: 70px;
-
-        .paragraph {
-            max-width: 700px;
+        #hide-text {
+            display: none;
             margin: 0 auto;
-            padding-bottom: 2.5em;
-            font-size: 20px;
-            line-height: 1.3em;
-            letter-spacing: .08em;
+            padding-top: 70px;
+    
+            .paragraph {
+                max-width: 700px;
+                margin: 0 auto;
+                padding-bottom: 2.5em;
+                font-size: 20px;
+                line-height: 1.3em;
+                letter-spacing: .08em;
+            }
+        }
+        .desc-more {
+            width: 90%;
+            text-align: center;
         }
     }
-    .desc-more {
-        width: 90%;
-        text-align: center;
-    }
 }
+
+
+
 
 
 
@@ -112,8 +112,8 @@ main{
 
 .sc-collection {
     position: relative;
-    background: #191917;
-    color: #f8f8f4;
+    background: #f8f8f4;
+    color: #191917;
     z-index: 2;
     height: 100vh;
     
@@ -151,33 +151,22 @@ main{
             height: 100vh;
             width: 50vw;
             padding: 0 50%;
-            &.text{
-                width: 50vw;
-                p{
-                    max-width: 670px;
-                    font-size: 25px;
-                    font-weight: 900;
-                    letter-spacing: .08em;
-                    text-transform: uppercase;
-                }
+            .img-wrap {
+                width: 500px; height: 500px;
+                
             }
-            &:nth-child(2) {
-                width: 50vw;
-            }
+
         }
-        .white {
-            background: #f8f8f4;
-            color: #191917;
-        }
+        
     }
 }
 
 
-// ----------------------- Section Metal -----------------------
-.sc-metal {
+// ----------------------- Section Collabo -----------------------
+.sc-collabo {
     position: relative;
-    background: #191917;
     color: #f8f8f4;
+    background: #b5cde8;
     .common-inner {
         padding-top: 10vh;
         padding-bottom: 30vh;
@@ -200,7 +189,7 @@ main{
 
         .cursor-explore{
             position: absolute;
-            top: 50px; left: -80px;
+            top: 0; left: 0;
             z-index: 1;
             pointer-events: none;
             display: flex;
@@ -209,7 +198,7 @@ main{
             justify-content: center;
             width: 160px;
             height: 160px;
-            border: 1px solid #bb8d8d;
+            border: 1px solid #1e4aee;
             border-radius: 50%;
 
             p {
@@ -247,9 +236,9 @@ main{
 
 
 // ----------------------- Section Concept -----------------------
-.sc-concept {
+.sc-worth {
     display: flex;
-
+    background: #f8f8f4;
     .img-area {
         position: sticky;
         top: 0;
@@ -259,11 +248,11 @@ main{
         img {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
         .cursor-explore {
             position: absolute;
-            top: 50%; left: 60%;
+            top: 0; left: 0;
             z-index: 1;
             pointer-events: none;
             display: flex;
@@ -293,8 +282,8 @@ main{
         background: #f8f8f4;
 
         .title {
-            text-align: center;
-            font-size: 28vw;
+            text-align: left;
+            font-size: 19vw;
             font-family: $font-main;
             font-weight: 900;
             letter-spacing: .008em;
@@ -321,7 +310,6 @@ main{
         .desc {
             text-align: left;
             text-transform: uppercase;
-            
             font-size: 25px;
             font-weight: 800;
             letter-spacing: .05em;
@@ -349,9 +337,9 @@ main{
 // ----------------------- Section Lab -----------------------
 .sc-lab {
     position: relative;
-    background: #191917;
-    color: #f8f8f4;
+    color: #191917;
     z-index: 2;
+    background-image: url(../images/sec1.jpg);
 
     .lab-top {
         padding-top: 10em;
@@ -361,7 +349,7 @@ main{
             position: sticky;
             display: block;
             top: 20vh;
-            width: 30%;
+            width: 50%;
             margin: 0 auto;
             margin-top: 8vw;
             margin-bottom: -10vw;
@@ -397,13 +385,22 @@ main{
         }
         .title {
             position: absolute;
-            top: 0%; right: 18%;
+            top: 5%; left: 20%;
             text-align: left;
-            font-size: 33vw;
+            font-size: 10vw;
             font-weight: 800;
             letter-spacing: .008em;
             overflow: hidden;
             line-height: 1em;
+            .sub-title {
+                display: block;
+                text-align: right;
+                font-size: 2vw;
+                font-weight: 800;
+                letter-spacing: .008em;
+                overflow: hidden;
+                line-height: 1em;
+            }
         }
 
     }

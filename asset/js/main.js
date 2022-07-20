@@ -73,7 +73,7 @@ $(function(){
         end: "bottom top", //[트리거기준 , 윈도우기준]
         markers: true,
         animation: motion01,
-        toggleActions: "play pause pause reset"
+        toggleActions: "play pause pause pause"
       })
 
     })
@@ -96,7 +96,7 @@ $(function(){
       // 특정영역에서 트리거
       ScrollTrigger.create({
         trigger: element,
-        start: "top 50%", //[트리거기준 , 윈도우기준]
+        start: "top center", //[트리거기준 , 윈도우기준]
         end: "bottom top", //[트리거기준 , 윈도우기준]
         markers: true, // 기준을 알려주는것
         animation: motion,
@@ -104,15 +104,6 @@ $(function(){
       })
 
     });
-
-    // gsap.from('???',{
-    //   yPercent:100
-    // })
-
-
-
-
-
 
 
 })

@@ -204,7 +204,7 @@ body {
 }
 
 .header {
-  color: #f8f8f4;
+  color: #1e4aee;
   position: relative;
 }
 .header > .inner {
@@ -213,7 +213,7 @@ body {
   z-index: 99;
   width: 100%;
   display: flex;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.15em;
   justify-content: space-between;
@@ -223,8 +223,10 @@ body {
   transform: translateY(-100%);
 }
 .header > .inner.active {
-  background: #191917;
-  color: #f8f8f4;
+  background: rgba(250, 250, 250, 0.7);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  color: #1e4aee;
 }
 .header > .inner .logo {
   position: absolute;
@@ -253,7 +255,6 @@ body {
   right: -100%;
   width: 100%;
   height: 100%;
-  background: #f00;
   z-index: 99;
 }
 .header .group-menu .active {
@@ -333,8 +334,8 @@ main {
 
 .sc-visual {
   position: relative;
-  background: #191917;
-  color: #f8f8f4;
+  background-image: url(../images/sec1.jpg);
+  color: #1e4aee;
   z-index: 3;
 }
 .sc-visual .common-inner {
@@ -345,7 +346,7 @@ main {
   position: sticky;
   top: 20vh;
   z-index: 1;
-  width: 30%;
+  width: 28%;
   margin: 0 auto;
 }
 .sc-visual .common-inner .img-box img {
@@ -372,16 +373,15 @@ main {
   z-index: 2;
   font-size: 21vw;
 }
-
-.sc-description {
+.sc-visual .sc-description {
   position: relative;
-  color: #f8f8f4;
-  background: #191917;
-  height: 100vh;
+  color: #191917;
   display: flex;
   align-items: center;
+  padding-bottom: 30px;
+  top: -100px;
 }
-.sc-description .desc {
+.sc-visual .sc-description .desc {
   text-align: center;
   font-family: "Saira Extra Condensed", sans-serif;
   font-weight: 900;
@@ -389,13 +389,13 @@ main {
   line-height: 1.5em;
   letter-spacing: 0.05em;
 }
-.sc-description .desc .underline {
+.sc-visual .sc-description .desc .underline {
   background-image: linear-gradient(#bb8d8d, #bb8d8d);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 2px;
 }
-.sc-description .desc .italic {
+.sc-visual .sc-description .desc .italic {
   font-family: "Noto Serif Display", "Saira Extra Condensed", serif;
   font-weight: 400;
   white-space: nowrap;
@@ -403,12 +403,12 @@ main {
   font-style: italic;
   font-size: 26px;
 }
-.sc-description #hide-text {
+.sc-visual .sc-description #hide-text {
   display: none;
   margin: 0 auto;
   padding-top: 70px;
 }
-.sc-description #hide-text .paragraph {
+.sc-visual .sc-description #hide-text .paragraph {
   max-width: 700px;
   margin: 0 auto;
   padding-bottom: 2.5em;
@@ -416,15 +416,15 @@ main {
   line-height: 1.3em;
   letter-spacing: 0.08em;
 }
-.sc-description .desc-more {
+.sc-visual .sc-description .desc-more {
   width: 90%;
   text-align: center;
 }
 
 .sc-collection {
   position: relative;
-  background: #191917;
-  color: #f8f8f4;
+  background: #f8f8f4;
+  color: #191917;
   z-index: 2;
   height: 100vh;
 }
@@ -463,34 +463,21 @@ main {
   width: 50vw;
   padding: 0 50%;
 }
-.sc-collection .swiper-slide.text {
-  width: 50vw;
-}
-.sc-collection .swiper-slide.text p {
-  max-width: 670px;
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.sc-collection .swiper-slide:nth-child(2) {
-  width: 50vw;
-}
-.sc-collection .swiper .white {
-  background: #f8f8f4;
-  color: #191917;
+.sc-collection .swiper-slide .img-wrap {
+  width: 500px;
+  height: 500px;
 }
 
-.sc-metal {
+.sc-collabo {
   position: relative;
-  background: #191917;
   color: #f8f8f4;
+  background: #b5cde8;
 }
-.sc-metal .common-inner {
+.sc-collabo .common-inner {
   padding-top: 10vh;
   padding-bottom: 30vh;
 }
-.sc-metal .title {
+.sc-collabo .title {
   position: absolute;
   top: 10%;
   left: 55%;
@@ -500,16 +487,16 @@ main {
   font-size: 6vw;
   z-index: 21;
 }
-.sc-metal .video-wrap {
+.sc-collabo .video-wrap {
   z-index: 20;
   position: relative;
   width: 30%;
   margin: 0 auto;
 }
-.sc-metal .video-wrap .cursor-explore {
+.sc-collabo .video-wrap .cursor-explore {
   position: absolute;
-  top: 50px;
-  left: -80px;
+  top: 0;
+  left: 0;
   z-index: 1;
   pointer-events: none;
   display: flex;
@@ -518,59 +505,60 @@ main {
   justify-content: center;
   width: 160px;
   height: 160px;
-  border: 1px solid #bb8d8d;
+  border: 1px solid #1e4aee;
   border-radius: 50%;
 }
-.sc-metal .video-wrap .cursor-explore p {
+.sc-collabo .video-wrap .cursor-explore p {
   font-size: 25px;
 }
-.sc-metal .video-wrap .cursor-explore p i {
+.sc-collabo .video-wrap .cursor-explore p i {
   font-family: "Noto Serif Display", "Saira Extra Condensed", serif;
   font-style: italic;
   font-weight: 400;
   font-size: 1em;
 }
-.sc-metal .video-wrap img {
+.sc-collabo .video-wrap img {
   max-width: 100%;
   height: auto;
 }
-.sc-metal .inner {
+.sc-collabo .inner {
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translateX(-50%);
 }
-.sc-metal .inner .subtitle {
+.sc-collabo .inner .subtitle {
   display: block;
   font-family: "Noto Serif Display", "Saira Extra Condensed", serif;
   font-weight: 400;
   font-size: 6vw;
   letter-spacing: 0.08em;
 }
-.sc-metal .inner .subtitle:last-child {
+.sc-collabo .inner .subtitle:last-child {
   z-index: 22;
 }
 
-.sc-concept {
+.sc-worth {
   display: flex;
+  background: #f8f8f4;
 }
-.sc-concept .img-area {
+.sc-worth .img-area {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 100vh;
   width: 50%;
 }
-.sc-concept .img-area img {
+.sc-worth .img-area img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-.sc-concept .img-area .cursor-explore {
+.sc-worth .img-area .cursor-explore {
   position: absolute;
-  top: 50%;
-  left: 60%;
+  top: 0;
+  left: 0;
   z-index: 1;
   pointer-events: none;
   display: flex;
@@ -582,35 +570,35 @@ main {
   border: 1px solid #bb8d8d;
   border-radius: 50%;
 }
-.sc-concept .img-area .cursor-explore p {
+.sc-worth .img-area .cursor-explore p {
   color: #f8f8f4;
   font-size: 25px;
 }
-.sc-concept .img-area .cursor-explore p i {
+.sc-worth .img-area .cursor-explore p i {
   font-family: "Noto Serif Display", "Saira Extra Condensed", serif;
   font-style: italic;
   font-weight: 400;
   font-size: 1em;
 }
-.sc-concept .content-area {
+.sc-worth .content-area {
   width: 50%;
   padding: 0 3vw;
   flex: 1;
   background: #f8f8f4;
 }
-.sc-concept .content-area .title {
-  text-align: center;
-  font-size: 28vw;
+.sc-worth .content-area .title {
+  text-align: left;
+  font-size: 19vw;
   font-family: "Saira Extra Condensed", sans-serif;
   font-weight: 900;
   letter-spacing: 0.008em;
   line-height: 1.2em;
 }
-.sc-concept .content-area .title span {
+.sc-worth .content-area .title span {
   display: block;
   white-space: nowrap;
 }
-.sc-concept .content-area .text {
+.sc-worth .content-area .text {
   text-align: left;
   font-size: 25px;
   font-weight: 800;
@@ -618,13 +606,13 @@ main {
   line-height: 1.2em;
   margin: 12em 0;
 }
-.sc-concept .content-area .text .italic {
+.sc-worth .content-area .text .italic {
   font-family: "Noto Serif Display", "Saira Extra Condensed", serif;
   font-style: italic;
   font-weight: 400;
   font-size: 23px;
 }
-.sc-concept .content-area .desc {
+.sc-worth .content-area .desc {
   text-align: left;
   text-transform: uppercase;
   font-size: 25px;
@@ -632,7 +620,7 @@ main {
   letter-spacing: 0.05em;
   line-height: 1.2em;
 }
-.sc-concept .content-area .link-concept {
+.sc-worth .content-area .link-concept {
   display: block;
   text-align: left;
   color: #bb8d8d;
@@ -640,7 +628,7 @@ main {
   font-weight: 500;
   font-size: 23px;
 }
-.sc-concept .content-area .link-concept .italic {
+.sc-worth .content-area .link-concept .italic {
   font-family: "Noto Serif Display", "Saira Extra Condensed", serif;
   font-style: italic;
   font-weight: 400;
@@ -649,9 +637,9 @@ main {
 
 .sc-lab {
   position: relative;
-  background: #191917;
-  color: #f8f8f4;
+  color: #191917;
   z-index: 2;
+  background-image: url(../images/sec1.jpg);
 }
 .sc-lab .lab-top {
   padding-top: 10em;
@@ -662,7 +650,7 @@ main {
   position: sticky;
   display: block;
   top: 20vh;
-  width: 30%;
+  width: 50%;
   margin: 0 auto;
   margin-top: 8vw;
   margin-bottom: -10vw;
@@ -698,10 +686,19 @@ main {
 }
 .sc-lab .lab-top .title {
   position: absolute;
-  top: 0%;
-  right: 18%;
+  top: 5%;
+  left: 20%;
   text-align: left;
-  font-size: 33vw;
+  font-size: 10vw;
+  font-weight: 800;
+  letter-spacing: 0.008em;
+  overflow: hidden;
+  line-height: 1em;
+}
+.sc-lab .lab-top .title .sub-title {
+  display: block;
+  text-align: right;
+  font-size: 2vw;
   font-weight: 800;
   letter-spacing: 0.008em;
   overflow: hidden;
