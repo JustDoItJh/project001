@@ -29,6 +29,7 @@ $(function(){
 
     })
 
+
     
     // Menu Button
     
@@ -42,6 +43,7 @@ $(function(){
         // $('.group-menu').animate({'left':'-100%'},300)
         $('.group-menu').removeClass('active')
     })
+
     
 
 
@@ -60,46 +62,6 @@ $(function(){
         
     });
     
-
-
-    // Mouse Cursor drag
-    const circle = $('.circle').width()/2;
-
-    $('.main-wrap').mousemove(function(e){
-
-        // 모션 라이브러리
-        $('.circle').show();
-        gsap.to('.circle',0.8,{
-            x: e.clientX - circle,
-            y: e.clientY - circle
-        })
-
-    });
-
-
-    const cursorWidth2 = $('.cursor-explore').width()/2;
-    const cursorHeight2 = $('.cursor-explore').height()/2;
-    $('.video-wrap').mousemove(function(e){
-
-        $('.circle').addClass('hide');
-        gsap.to('.cursor-explore',0.8,{
-            x: e.offsetX - cursorWidth2,
-            y: e.offsetY - cursorHeight2
-        })
-
-    });
-
-    const cursorWidth3 = $('.cursor-explore').width()/2;
-    const cursorHeight3 = $('.cursor-explore').height()/2;
-    $('.img-area').mousemove(function(e){
-
-        $('.circle').addClass('hide');
-        gsap.to('.cursor-explore',0.8,{
-            x: e.offsetX - cursorWidth3,
-            y: e.offsetY - cursorHeight3
-        })
-
-    });
 
 
 });
