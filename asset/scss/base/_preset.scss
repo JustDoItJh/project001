@@ -1,8 +1,7 @@
 body {
-    font-family: $font-kr;
-    color: #000;
-    background: #fff;
-    font-size: 14px;
+    font-family: $font-main;
+    color: #191917;
+    letter-spacing: 0.008em;
 }
 
 .blind{
@@ -14,3 +13,8 @@ body {
     margin: -1px;
 }
 
+.common-inner {
+    width: 100%;
+    max-width: 1790px;
+    margin: 0 auto;
+}

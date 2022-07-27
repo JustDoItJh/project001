@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital@0;1&family=Saira+Extra+Condensed:wght@400;500;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -183,10 +183,9 @@ textarea::-webkit-outer-spin-button {
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
-  color: #000;
-  background: #fff;
-  font-size: 14px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  color: #191917;
+  letter-spacing: 0.008em;
 }
 
 .blind {
@@ -243,7 +242,7 @@ body {
   width: 19px;
   height: 19px;
   border-radius: 50%;
-  background: #bb8d8d;
+  background: #1e4aee;
   transition: transform 0.3s ease;
   z-index: 99;
 }
@@ -347,7 +346,7 @@ main {
   position: sticky;
   top: 20vh;
   z-index: 1;
-  width: 28%;
+  max-width: 28%;
   margin: 0 auto;
 }
 .sc-visual .common-inner .img-box img {
@@ -448,6 +447,7 @@ main {
   letter-spacing: 0.2em;
   -ms-writing-mode: tb;
       writing-mode: tb;
+  z-index: 2;
 }
 .sc-collection .slide-num .italic {
   font-family: "Noto Serif Display", "Saira Extra Condensed", serif;
@@ -461,12 +461,12 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 50vw;
+  max-width: 50vw;
   padding: 0 50%;
 }
-.sc-collection .swiper-slide .img-wrap {
-  width: 500px;
-  height: 500px;
+.sc-collection .swiper-slide .img-wrap img {
+  max-width: 480px;
+  max-height: 480px;
 }
 
 .sc-collabo {
@@ -553,8 +553,8 @@ main {
 .sc-worth .img-area img {
   height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .sc-worth .img-area .cursor-explore {
   position: absolute;
@@ -659,6 +659,7 @@ main {
 .sc-lab .lab-top .img-area img {
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 .sc-lab .lab-top .img-area .cursor-explore {
   position: absolute;
@@ -764,43 +765,64 @@ main {
   font-size: 1em;
 }
 
-.sc-highlights {
+.sc-sns {
   position: relative;
   background: #f8f8f4;
   height: 100vh;
 }
 
-.sc-highlights .title {
-  padding: 14vh 0 20vh;
+.sc-sns .title {
+  padding: 14vh 0 10vh;
   font-weight: 900;
   font-size: 25px;
   line-height: 1.3em;
 }
 
-.sc-highlights .common-inner {
-  padding: 0 30em;
+.sc-sns {
+  height: auto;
 }
-.sc-highlights .logos {
+.sc-sns .common-inner {
+  max-width: 1000px;
+}
+.sc-sns .sns-flex {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
+  gap: 20px;
 }
-.sc-highlights .logos .logo {
+.sc-sns .sns-flex .sns {
   display: flex;
-  flex: 1 1 30%;
-  height: 0;
-  padding-bottom: 20%;
-  display: block;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
-.sc-highlights .logos .logo img {
+.sc-sns .sns-flex .sns img {
+  width: 400px;
+  height: 300px;
   max-width: 100%;
   height: auto;
-  display: block;
   margin: 0 auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-  transform: scale(0.7);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sc-sns .sns-flex .sns .sns-title {
+  padding: 10px 0 0 15px;
+  max-width: 400px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+.sc-sns .sns-flex .sns .sns-desc {
+  padding-left: 15px;
+  max-width: 400px;
+  text-align: left;
 }
 
 .sc-articles {
@@ -809,13 +831,13 @@ main {
   height: 100vh;
 }
 .sc-articles .title {
-  padding: 14vh 0 25vh;
+  padding: 20vh 0 20vh;
   font-weight: 900;
   font-size: 25px;
   line-height: 1.3em;
 }
 .sc-articles .articles {
-  text-align: left;
+  text-align: center;
   padding: 0 10vw;
 }
 .sc-articles .articles .link-articles {
@@ -823,7 +845,7 @@ main {
   font-weight: 400;
   line-height: 1.018em;
   letter-spacing: 0.036em;
-  font-size: 4em;
+  font-size: 3em;
 }
 .sc-articles .articles .link-articles .text {
   transition: color 0.3s;
@@ -832,5 +854,5 @@ main {
   font-style: italic;
 }
 .sc-articles .articles .link-articles .text:hover {
-  color: #bb8d8d;
+  color: #1e4aee;
 }

@@ -19,7 +19,7 @@ $(function(){
     });
 
     
-    const  logo = gsap.from('.sc-highlights .logo',{
+    const  sns = gsap.from('.sc-sns .sns',{
       opacity: 0,
       y: 100,
       stagger:0.1
@@ -27,11 +27,11 @@ $(function(){
 
     // 특정영역에서 트리거
     ScrollTrigger.create({
-      trigger: ".sc-highlights",
+      trigger: ".sc-sns",
       start: "top 50%", //[트리거기준 , 윈도우기준]
       end: "bottom top", //[트리거기준 , 윈도우기준]
-      markers: true,
-      animation: logo,
+      markers: false,
+      animation: sns,
       // onEnter, 도달했을때
       // onLeave, 앤드가 스크롤앤드랑 만났을 때
       // onEnterBack, 스크롤앤드가 앤드로 다시 들어왔을 때
@@ -51,7 +51,7 @@ $(function(){
       trigger: ".content-area",
       start: "top top", //[트리거기준 , 윈도우기준]
       end: "bottom top", //[트리거기준 , 윈도우기준]
-      markers: true,
+      markers: false,
       animation: concept,
       toggleActions: "play pause pause reset"
     })
@@ -71,7 +71,7 @@ $(function(){
         trigger: a,
         start: "top top", //[트리거기준 , 윈도우기준]
         end: "bottom top", //[트리거기준 , 윈도우기준]
-        markers: true,
+        markers: false,
         animation: motion01,
         toggleActions: "play pause pause pause"
       })
@@ -98,7 +98,7 @@ $(function(){
         trigger: element,
         start: "top center", //[트리거기준 , 윈도우기준]
         end: "bottom top", //[트리거기준 , 윈도우기준]
-        markers: true, // 기준을 알려주는것
+        markers: false, // 기준을 알려주는것
         animation: motion,
         toggleActions: "play pause pause reset"
       })

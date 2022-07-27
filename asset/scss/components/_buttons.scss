@@ -1,0 +1,39 @@
+// Mouse Cursor drag
+.circle {
+    position: fixed;
+    width: 15px; height: 15px;
+    top: 0; left: 0;
+    transform: translate(-10%, -10%);
+    border-radius: 50%;
+    background-color: #f8f8f4;
+    opacity: 0.7;
+    z-index: 10;
+    pointer-events: none;
+    &.hide {
+        display: none;
+    }
+}
+
+
+// Menu BUTTON
+
+
+
+
+// More Button
+.btn-more {
+    position: relative;
+    display: block;
+    color: #bb8d8d;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.32em;
+
+    em {
+        font-family: $font-sub;
+        font-style: italic;
+        font-size: 1.15em;
+    }
+}
