@@ -36,7 +36,7 @@ $(function(){
       // onLeave, 앤드가 스크롤앤드랑 만났을 때
       // onEnterBack, 스크롤앤드가 앤드로 다시 들어왔을 때
       // onLeaveBack (start와 스크롤스타트 스타트영역 벗어났을때)
-      toggleActions: "play pause pause reset"
+      
     })
 
 
@@ -53,7 +53,7 @@ $(function(){
       end: "bottom top", //[트리거기준 , 윈도우기준]
       markers: false,
       animation: concept,
-      toggleActions: "play pause pause reset"
+      
     })
 
 
@@ -73,7 +73,7 @@ $(function(){
         end: "bottom top", //[트리거기준 , 윈도우기준]
         markers: false,
         animation: motion01,
-        toggleActions: "play pause pause pause"
+        
       })
 
     })
@@ -100,7 +100,7 @@ $(function(){
         end: "bottom top", //[트리거기준 , 윈도우기준]
         markers: false, // 기준을 알려주는것
         animation: motion,
-        toggleActions: "play pause pause reset"
+        
       })
 
     });

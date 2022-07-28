@@ -206,11 +206,11 @@ body {
 .header {
   color: #1e4aee;
   position: relative;
+  z-index: 99;
 }
 .header > .inner {
   position: fixed;
   padding: 50px;
-  z-index: 99;
   width: 100%;
   display: flex;
   font-size: 20px;
@@ -244,7 +244,7 @@ body {
   border-radius: 50%;
   background: #1e4aee;
   transition: transform 0.3s ease;
-  z-index: 99;
+  z-index: 100;
 }
 .header > .inner .btn-menu:hover {
   transform: scale(3);
@@ -252,14 +252,78 @@ body {
 .header .group-menu {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 100%;
+  right: -50%;
+  width: 50%;
   height: 100%;
   z-index: 99;
+  display: flex;
 }
-.header .group-menu .active {
-  right: 0;
+.header .group-menu.active {
+  right: 0%;
   z-index: 100;
+}
+.header .group-menu .menu-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgba(29, 29, 23, 0.7);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+.header .group-menu .menu-area .close-wrap {
+  flex-basis: 10%;
+  background: rgba(0, 0, 0, 0);
+}
+.header .group-menu .menu-area .close-wrap .btn-close {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f8f8f4;
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+.header .group-menu .menu-area .close-wrap .btn-close:hover {
+  transform: scale(3);
+  background: #1e4aee;
+}
+.header .group-menu .menu-area .menu-wrap {
+  flex-basis: 50%;
+}
+.header .group-menu .menu-area .menu-wrap .menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header .group-menu .menu-area .menu-wrap .menu-list .menu-item {
+  font-size: 70px;
+  font-style: italic;
+  color: #f8f8f4;
+  letter-spacing: 0.1em;
+}
+.header .group-menu .menu-area .menu-wrap .menu-list .menu-item .link-menu {
+  display: block;
+}
+.header .group-menu .menu-area .menu-wrap .menu-list .menu-item .link-menu:hover {
+  color: #1e4aee;
+  opacity: 0.7;
+}
+.header .group-menu .menu-area .menu-wrap .menu-list .menu-item .link-menu > i {
+  font-weight: 900;
+}
+.header .group-menu .menu-area .media-wrap {
+  flex-basis: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f8f8f4;
+}
+.header .group-menu .menu-area .media-wrap .link-media {
+  font-size: 20px;
 }
 
 .footer {
@@ -299,13 +363,13 @@ body {
   left: 0;
   transform: translate(-10%, -10%);
   border-radius: 50%;
-  background-color: #f8f8f4;
+  background-color: #000;
   opacity: 0.7;
-  z-index: 10;
+  z-index: 1000;
   pointer-events: none;
 }
 .circle.hide {
-  display: none;
+  opacity: 0;
 }
 
 .btn-more {

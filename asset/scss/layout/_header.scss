@@ -1,10 +1,10 @@
 .header {
     color: #1e4aee;
     position: relative;
+    z-index: 99;
     &>.inner {
         position: fixed;
         padding: 50px;
-        z-index: 99;
         width: 100%;
         display: flex;
         font-size: 20px;
@@ -36,7 +36,7 @@
             border-radius: 50%;
             background: #1e4aee;
             transition: transform .3s ease;
-            z-index: 99;
+            z-index: 100;
             &:hover {
                 transform: scale(3);
             }
@@ -45,13 +45,72 @@
     
     .group-menu {
         position: fixed;
-        top: 0; right: -100%;
-        width: 100%; height: 100%;
+        top: 0; right: -50%;
+        width: 50%; height: 100%;
         z-index: 99;
-    
-        .active {right: 0; z-index: 100;}
-        // .close-area {flex: 1; background: #00f; }
-        // .menu-area {flex: 1;}
+        
+        display: flex;
+        
+        &.active {right: 0%; z-index: 100;}
+        
+        .menu-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: rgba($color: #1d1d17, $alpha: 0.7);
+            backdrop-filter: blur(50px);
+
+            .close-wrap {
+                flex-basis: 10%;
+                background: rgba($color: #000000, $alpha: 0);
+                .btn-close {
+                    width: 25px; height: 25px;
+                    border-radius: 50%;
+                    background: #f8f8f4;
+                    transition: transform .3s ease;
+                    z-index: 100;
+                    &:hover {
+                        transform: scale(3);
+                        background: #1e4aee;
+                    }
+                }
+            }
+            .menu-wrap {
+                flex-basis: 50%;
+                .menu-list {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .menu-item {
+                        font-size: 70px;
+                        font-style: italic;
+                        color: #f8f8f4;
+                        letter-spacing: .1em;
+                        
+                        .link-menu {
+                            display: block;
+                            &:hover {color: #1e4aee; opacity: .7;}
+                            &>i {font-weight: 900;}
+                        }
+                    }
+                }
+            }
+            .media-wrap {
+                flex-basis: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #f8f8f4;
+                .link-media {
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }
 
